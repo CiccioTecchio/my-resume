@@ -112,6 +112,7 @@
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
+\definecolor{bootstrap-primary}{RGB}{0, 123, 255}
 \colorlet{text}{darkgray}
 \colorlet{graytext}{gray}
 % Awesome colors
@@ -293,7 +294,7 @@
 % contact info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
+\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{bootstrap-primary}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
 \newcommand{\email}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
 \newcommand{\address}[1]{\infofield{\faAt}{#1}}
 \newcommand{\location}[1]{\infofield{\faMapMarker}{#1}}
@@ -303,7 +304,7 @@
 \newcommand{\github}[2]{\infofield{\faGithub}{\href{#2}{#1}}}
 \newcommand{\orcid}[2]{\infofield{\aiOrcid}{\href{#2}{#1}}}
 \newcommand{\ads}[2]{\infofield{\aiADS}{\href{#2}{#1}}}
-
+\newcommand{\stackoverflow}[2]{\infofield{\faStackOverflow}{\href{#2}{#1}}}
 
 % highlight bar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -411,7 +412,7 @@
 \newcommand{\skill}[2]{%
     \textcolor{emphasis}{\textbf{#1}}\hfill
     \foreach \x in {1,...,5}{%
-      \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{accent}}\faCircle}}\par%
+      \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{bootstrap-primary}}\faCircle}}\par%
 }
 
 % skill without any charts
@@ -425,7 +426,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skillsection}[1]{%
-    \textit{\color{accent}#1}\par
+    \textit{\color{bootstrap-primary}#1}\par
 }
 
 % tag (framed word or phrase)
