@@ -5,13 +5,18 @@
               ]{my-resume}
 
 \usepackage{hyperref}
+
+\usepackage{xcolor} % Pacchetto per definire i colori personalizzati
+
+% Definizione del colore personalizzato
+\definecolor{customblue}{HTML}{007bff}
 \usepackage{comment}
 \hypersetup{%
      colorlinks=true,
-     linkcolor=blue,
-     filecolor=blue,
+     linkcolor=customblue,
+     filecolor=customblue,
      citecolor = black,      
-     urlcolor=cyan,
+     urlcolor=customblue,
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,7 +24,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength\highlightwidth{8cm}
-\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\headerheight{3cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
 \setlength\margintop{1cm}
@@ -56,7 +61,12 @@
 \begin{document}
 
 \name{Francesco Vicidomini}
-\tagline{I'm a developer who likes to develop mostly with front-end languages and/or frameworks. I'm working mainly with Angular 2+ and I'm learning React just to change a little bit.\\Currently the topics that interest me most are the Agile methodologies, in particular the Scrum framework, and front-end development trying not to fossilize too much on the code but also trying to take care of the UI and UX of what I develop.}
+\tagline{I am a full-stack developer, when I develop I pay attention to UI/UX and also code reuse.\\
+I also really enjoy giving presentations and sharing the results of my work.}
+\begin{comment} %old tagline
+\tagline{I'm a developer who likes to develop mostly with front-end languages and/or frameworks. I'm working mainly with Angular 2+ and I'm learning React just to change a little bit.\\Currently the topics that interest me most are the Agile methodologies, in particular the Scrum framework, and front-end development trying not to fossilize too much on the code but also trying to take care of the UI and UX of what I develop.}    
+\end{comment}
+
 \photo[round]{propic.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
 \makeheader
@@ -67,7 +77,6 @@
     
     \email{fr.vicidomini94@gmail.com}
     \phone{+39 327 5684733}
-    \vspace{0.5em}
     \homepage{cicciotecchio.dev}{https://cicciotecchio.dev/}
     \github{@Cicciotecchio}{https://github.com/CiccioTecchio}
     \linkedin{Francesco Vicidomini}{https://www.linkedin.com/in/francesco-vicidomini-374aa813a/}
@@ -80,34 +89,36 @@
     \skill{Java}{3}
     \skill{Javascript and Typescript}{4}
     \skill{Angular2+}{4}
+    \skill{RxJS}{4}\\
+    \skill{NgRx}{4}\\
     \skill{React.js}{3}
-    \skill{SQL \& NoSQL}{3}\\
-    (MySQL, MongoDb and Neo4j)\\
+    \skill{SQL \& NoSQL DBMS}{3}\\
     \skill{HTML/CSS}{4}\\
-    \skill{Software testing}{3}\\
-    \skill{Node.js}{4}
+    \skill{Node.js}{4}\\
+    \skill{Docker}{4}\\
+    \skill{Software testing}{3}
     
     
     
-    \vspace{0.5em}
+    \vspace{0.3em}
     \skillsection{Software \& Tools}
     \skill{Versioning with git}{5}
     \skill{Issue management}{3}\\
     (e.g. trello, gitHub and gitLab issue ecc...)\\
     \skill{Deploy in cloud platform}{3}\\
     (I've deployed some app on SAP CP, AWS EC2 and AWS RDS e my personal Raspberry PI)\\
-    \skill{Office}{4}
+    \skill{Microsoft Office}{4}
     
-    \vspace{0.5em}
+    \vspace{0.3em}
     \skillsection{Agile methodology}
     \skill{Scrum}{4}\\
     \skill{Kanban}{3}
     
-    \vspace{0.5em}
+    \vspace{0.3em}
     \skillsection{Languages}
     \skill{Italian}{5}
     \skill{English}{3}
-    \bigskip
+    
     
     \section{Soft skills}
     \skill{Communication}{4}
@@ -119,15 +130,22 @@
     % \simpleskill{PSM-1}
     
     \section{Personal hobbies}
-    \simpleskill{Work out}
-    \simpleskill{Ride motocyclie}
-    \simpleskill{Learn new technology or framework}
-    \simpleskill{Read books, listen music and play videogames}
+    \simpleskill{Workout}
+    \simpleskill{Ride my motorcycle}
+    \simpleskill{Read books}
+    \simpleskill{Listen to music}
+    \simpleskill{Play videogames}
+    \simpleskill{Watch movies or TV series}
+    
 
 }
 \mainbar{
     \section[\faGears]{Work history}
-    \job{06/2020 - Current}
+    \job{07/2023 - Current}
+        {Engineering, Naples, Italy}
+        {Software Development Specialist}
+        {In Engineering, I am involved in various aspects of SW development, not just the front-end. I also deal with back-end development and continuous deployment aspects. The projects I am working on are mainly in the area of cybersecurity.}
+    \job{06/2020 - 07/2023}
         {NTT Data, Naples, Italy}
         {Software engineer}
         {I work in an Agile environment on the development, testing, and client release of web interfaces designed in Angular2+.}
@@ -148,32 +166,33 @@
         {Final grade 94}
 
     \section[\faCode]{Projects}
-        \job{06/2020 - Current}
+        \job{07/2023 - Current}
+        {Engineering}
+        {\href{https://encrypt-project.eu/}{ENCRYPT - Project}}
+        {This project allowed me to deepen my knowledge of computer security and personal data processing by developing a web application that allows users to carry out a privacy risk assessment.\\
+        In addition to developing the web application, I was also responsible for creating presentations and articles that could be used to present the project at meetings and conferences.\\ \textbf{Technology stack}: Angular 18, RxJS, NgRx, Node.js, MongoDB, Docker.}
+        \job{06/2020 - 07/2023}
         {NTT Data}
         {Pab goes digital}
-        {This project allows for the digitization of administrative procedures that are currently handled through paper applications and face-to-face interactions with the public offices of the Province of Bolzano. \textbf{Technology stack}: Angular 8, Spring, MySQL, SAP CP.}
+        {This project allows for the digitization of administrative procedures that are currently handled through paper applications and face-to-face interactions with the public offices of the Province of Bolzano.\\ \textbf{Technology stack}: Angular 8, Spring, MySQL, SAP CP.}
     \job{Current}
         {Myself}
-        {Cicciotecchio.dev}
-        {My personal website.  \textbf{Technology stack}: React, ReactBootstrap, GhPages. \href{https://github.com/CiccioTecchio/CiccioTecchio.dev}{Link to GitHub Repo}.}
-    \job{04/2022 - Current}
-        {Myself}
-        {RandomQuestion}
-        {An old C script that I used to use to prepare for exams. Given a text file with questions it shows questions a randomly chosen question. Now i'm rebuilding this project with React creating an exam simulator (branch dev-react). \textbf{Technology stack}: C, Bootstrap, React, GhPages. \href{https://github.com/CiccioTecchio/RandomQuestion}{Link to GitHub Repo}.}
+        {\href{https://github.com/CiccioTecchio/CiccioTecchio.dev}{Cicciotecchio.dev}}
+        {My personal website.\textbf{Technology stack}: React, ReactBootstrap, GhPages.}
     \job{09/2018 - 02/2019}
         {Università degli Studi di Salerno}
-        {ShareErasmus}
-        {I have carried out the activity of project manager coordinating 8 students in order to create a support platform for Erasmus students.\textbf{Technology stack}: JQuery, Node.js, MySQL, Firebase, AWS EC2, AWS RDS. \href{https://github.com/CiccioTecchio/SharErasmus}{Link to GitHub Repo}.}
+        {\href{https://github.com/CiccioTecchio/SharErasmus}{ShareErasmus}}
+        {I have carried out the activity of project manager coordinating 8 students in order to create a support platform for Erasmus students.\\\textbf{Technology stack}: JQuery, Node.js, MySQL, Firebase, AWS EC2, AWS RDS.}
         
     \job{02/2019 - 11/2019}
         {Università degli Studi di Salerno}
-        {YASPL3}
-        {This is a simple programming language that I've implemented for the exam of Compilatori. \textbf{Technology stack}: Java, LeX Java CUP. \href{https://github.com/CiccioTecchio/YASPL3}{Link to GitHub Repo}.}
+        {\href{https://github.com/CiccioTecchio/YASPL3}{YASPL3}}
+        {This is a simple programming language that I've implemented for the exam of Compilatori.\\ \textbf{Technology stack}: Java, LeX Java CUP.}
     
     \job{06/2018 - 06/2018}
         {Università degli Studi di Salerno}
-        {N-body}
-        {I paralleled the n-body simulation algorithm using OpenMp and tested the results on an AWS cluster. \textbf{Technology stack}: C, Open Mp, AWS EC2. \href{https://github.com/CiccioTecchio/n-Body_MPI}{Link to GitHub Repo}.}
+        {\href{https://github.com/CiccioTecchio/n-Body_MPI}{N-body}}
+        {I paralleled the n-body simulation algorithm using OpenMp and tested the results on an AWS cluster.\\ \textbf{Technology stack}: C, Open Mp, AWS EC2.}
         
     
     %\section{Achievements, honours and awards}
@@ -247,22 +266,17 @@
 
 \section{Publications}
 \pubforcefullwidth
-\begin{comment}
-
-
-Demonstrate what an \texttt{\textbackslash pagestyle\{empty\}} page looks like.
-Also show off the macros for publications that uses small icons for authors, date, journal and links.
-
-Achieving a good looking spacing can be tricky. For empty pagestyles where the full width is available use \texttt{\textbackslash pubforcefullwidth} to force the publoication list to take up all the available space.
-The (relative) lengths reserved for date, journal and links can be set with the parameters \texttt{\textbackslash pubdatelength}, \texttt{\textbackslash pubjournallength} and \texttt{\textbackslash publinklength} as in \texttt{\textbackslash setlength\{\textbackslash pubdatelength\}\{0.15 \textbackslash linewidth\}}.
-\bigskip
-\end{comment}
+\publication{Implementation of a tool for risk assessment of personal data processing using a methodology based on the LINDDUN and MITRE ATT\&CK frameworks}
+{Francsco Vicidomini, Paolo Roccetti, Vincenzo Napolitano}
+{2025}
+{\href{https://encrypt-project.eu/communication/encrypt-blog/}{Posted on ENCRYPT Project blog}}
+{}
 \publication
 	{Ex Machina: Analytical platforms, Law and the Challenges of Computational Legal Science} % Title
 	{Nicola Lettieri, Antonio Altamura, Rosalba Giugno, Alfonso Guarino, Delfina Malandrino, Alfredo Pulvirenti, Francesco Vicidomini, and Rocco Zaccagnino} % Authors
 	{2018} % Year
-	{Future Internet 2018, 10(5), 37} % Journal
-	{\href{https://www.mdpi.com/1999-5903/10/5/37}{Link}} % ADS & arxiv links
+	{\href{https://www.mdpi.com/1999-5903/10/5/37}{Future Internet 2018, 10(5), 37}} % Journal
+	{} % ADS & arxiv links
 \section{TREATMENT OF PERSONAL DATA}
 According to law 679/2016 of the Regulation of the European Parliament of 27th April 2016, I hereby express my consent to process and use my data provided in this CV and application for recruiting purposes.
 
