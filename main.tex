@@ -1,0 +1,165 @@
+\documentclass[
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=cyan}
+
+\RequirePackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+
+\usepackage{xcolor}
+\definecolor{awesome-red}{HTML}{E74C3C}
+\definecolor{lightgray}{gray}{0.95}
+\definecolor{darkgray}{gray}{0.3}
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-red}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+\begin{document}
+
+\name{Francesco Vicidomini \\ 
+\small Senior Front-End Developer specialized in Angular, RxJS and modern web architectures. Experience in Horizon Europe and NextGenerationEU projects, building scalable applications with focus on performance, UI/UX and clean design.}
+
+\tagline{}
+
+\photo[round]{Propic-CV.jpg}{4cm}
+
+\makeheader
+
+\highlightbar{
+
+\section{Contact}
+\email{fr.vicidomini94@gmail.com}
+\phone{+39 327 5684733}
+\homepage{cicciotecchio.dev}{https://cicciotecchio.dev/}
+\github{@Cicciotecchio}{https://github.com/CiccioTecchio}
+\linkedin{Francesco Vicidomini}{https://www.linkedin.com/in/francesco-vicidomini-374aa813a/}
+
+\section{Skills}
+
+\skillsection{Frontend}
+\skill{Angular}{5}
+\skill{TypeScript}{5}
+\skill{RxJS}{5}
+\skill{NgRx}{4}
+
+\skillsection{Backend}
+\skill{Node.js}{3}
+\skill{Java}{3}
+
+\skillsection{DevOps}
+\skill{Git}{5}
+\skill{Docker}{3}
+\skill{Kubernetes}{2}
+
+\skillsection{Other}
+\skill{Cybersecurity}{3}
+\skill{Machine Learning}{3}
+
+\section{Languages}
+\skill{Italian}{5}
+\skill{English}{4}
+
+\vfill
+\tiny{
+According to law 679/2016 of the Regulation of the European Parliament of 27th April 2016, I hereby express my consent to process and use my data provided in this CV and application for recruiting purposes.
+}
+
+}
+
+\mainbar{
+
+\section{Experience}
+
+\job{07/2023 - Current}
+{Engineering, Naples, Italy}
+{Software Development Specialist}
+{
+\begin{itemize}
+\item Developed cybersecurity applications with focus on Angular front-end architecture
+\item Built reactive applications using RxJS and NgRx
+\item Contributed to CI/CD pipelines and Docker-based deployments
+\item Collaborated in international research and innovation projects with distributed teams
+\item Ensured high-quality UI/UX in security-critical systems
+\end{itemize}
+}
+
+\job{06/2020 - 07/2023}
+{NTT Data, Naples, Italy}
+{Software Engineer}
+{
+\begin{itemize}
+\item Developed Angular applications for Italian Public Administration used by hundreds of users
+\item Designed scalable front-end architectures and improved legacy codebases
+\item Worked in Agile environments across full development lifecycle
+\end{itemize}
+}
+
+\section{Projects}
+
+\job{2025 - Current}
+{Engineering}
+{\href{https://www.eng.it/it/insights/stories/research-projects/ipcei-cis-avant}{AVANT}}
+{
+NextGenerationEU project focused on cybersecurity for Digital Twin systems. Developed web applications and contributed to front-end architecture in a research and innovation context.\\
+\textbf{Tech:} Angular, RxJS, Spring Boot, K8s, MongoDB
+}
+
+\job{2023 - 2025}
+{Engineering}
+{\href{https://encrypt-project.eu/}{ENCRYPT}}
+{
+Horizon Europe cybersecurity project focused on privacy risk assessment. Developed Angular 18 application using RxJS and NgRx. Worked in international teams (30+ people) and contributed to technical dissemination.\\
+\textbf{Tech:} Angular 18, RxJS, NgRx, Node.js, MongoDB, Docker
+}
+
+\job{2020 - 2023}
+{NTT Data}
+{PAB Goes Digital}
+{
+Platform for digitalization of public administration services developed using Angular.\\
+\textbf{Tech:} Angular, Spring, MySQL
+}
+
+
+\job{2018 - 2019}
+{University}
+{\href{https://github.com/CiccioTecchio/SharErasmus}{ShareErasmus}}
+{
+Erasmus platform developed as project manager of a team of 8 people.\\
+\textbf{Tech:} Node.js, MySQL, Firebase, AWS
+}
+
+\job{2018}
+{University}
+{\href{https://github.com/CiccioTecchio/n-Body_MPI}{N-body Simulation}}
+{
+Parallel simulation project with AWS cluster configuration and performance testing.\\
+\textbf{Tech:} C, OpenMP, AWS EC2
+}
+
+\section{Education}
+
+\job{2018 - 2020}
+{Università degli Studi di Salerno}
+{M.Sc. Computer Science}
+{110L}
+
+\job{2013 - 2017}
+{Università degli Studi di Salerno}
+{B.Sc. Computer Science}
+{94}
+
+}
+
+\makebody
+
+\end{document}
