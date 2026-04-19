@@ -49,7 +49,7 @@
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 \RequirePackage{academicons}
 
 
@@ -112,7 +112,7 @@
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
-\definecolor{bootstrap-primary}{RGB}{0, 123, 255}
+\definecolor{bootstrap-primary}{RGB}{35, 87, 137}
 \colorlet{text}{darkgray}
 \colorlet{graytext}{gray}
 % Awesome colors
@@ -294,7 +294,10 @@
 % contact info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{bootstrap-primary}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
+\newcommand{\infofield}[2]{%
+  \makebox[5mm][l]{\textcolor{bootstrap-primary}{\normalsize #1}}%
+  \hspace{0.6em}#2\par\vspace{0.35em}
+}
 \newcommand{\email}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
 \newcommand{\address}[1]{\infofield{\faAt}{#1}}
 \newcommand{\location}[1]{\infofield{\faMapMarker}{#1}}
@@ -357,10 +360,9 @@
 % redefine section in caps, bold and with rule below
 \renewcommand{\section}[2][]{%
     \bigskip%
-    % \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr 1pt-\baselineskip}\raggedright\input{#1}}}%
     \ifstrequal{#1}{}{}{\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{heading}\Large\bfseries\MakeUppercase{#2}}\\[-1ex]%
-    {\color{heading}\rule{\linewidth}{1.0pt}\par}\smallskip
+    {\color{heading}\Large\headingfont\MakeUppercase{#2}}\\[-0.6ex]%
+    {\color{heading}\rule{\linewidth}{0.8pt}\par}\smallskip
 }
 
 % redefine subsection as bold
@@ -410,9 +412,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skill}[2]{%
-    \textcolor{emphasis}{\textbf{#1}}\hfill
+    {\small\textcolor{emphasis}{\textbf{#1}}}\hfill
     \foreach \x in {1,...,5}{%
-      \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{bootstrap-primary}}\faCircle}}\par%
+      \hspace{0.15em}{\ifnumgreater{\x}{#2}{\color{gray!45}}{\color{bootstrap-primary}}\faCircle}}%
+    \par\vspace{0.2em}
+}
+% hobby
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hobby}[2]{%
+  \makebox[5mm][l]{\textcolor{bootstrap-primary}{\normalsize #1}}%
+  \hspace{0.6em}{\small #2}\par\vspace{0.3em}
+}
+
+% hobby inline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hobbyinline}[2]{%
+  \makebox[5mm][l]{\textcolor{bootstrap-primary}{\normalsize #1}}%
+  \hspace{0.4em}{\small #2}
+}
+
+%langskill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\langskill}[2]{%
+  {\small\textcolor{emphasis}{\textbf{#1}}}\hfill{\small #2}\par\vspace{0.2em}
 }
 
 % skill without any charts
@@ -426,7 +448,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skillsection}[1]{%
-    \textit{\color{bootstrap-primary}#1}\par
+    \vspace{0.35em}%
+    {\small\color{bootstrap-primary}\bfseries #1}\par
+    \vspace{0.2em}
 }
 
 % tag (framed word or phrase)
