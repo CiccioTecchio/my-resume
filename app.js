@@ -19,6 +19,8 @@ function element(tag, className, text) {
 function link(label, url, className) {
   const node = element("a", className, label);
   node.href = url;
+  node.setAttribute("aria-label", label);
+  node.title = label;
   node.target = "_blank";
   node.rel = "noreferrer";
   return node;
@@ -54,6 +56,7 @@ function renderHeader(personal) {
     element("h1", "name", personal.name),
     element("p", "summary", personal.summary)
   );
+  identity.firstElementChild.setAttribute("aria-hidden", "true");
 
   const photo = element("img", "profile-photo");
   photo.src = personal.photo;
@@ -150,7 +153,7 @@ function renderProjects(projects) {
 
     const description = element("p", "project-description", project.description);
     const technology = element("p", "technology-line");
-    technology.append(element("strong", null, "Technologies: "), document.createTextNode(project.technologies.join(", ")));
+    technology.append(element("span", "technology-label", "Technologies: "), document.createTextNode(project.technologies.join(", ")));
     article.append(heading, description, technology);
     const projectLinks = element("div", "project-links");
     if (project.repository) {
@@ -213,12 +216,12 @@ function renderPublications(publications, featuredAuthor) {
     article.append(heading, metadata);
     if (publication.authors?.length) {
       const authors = element("p", "publication-authors");
-      authors.append(element("strong", null, publication.authors.length === 1 ? "Author: " : "Authors: "));
+      authors.append(element("span", "authors-label", publication.authors.length === 1 ? "Author: " : "Authors: "));
       publication.authors.forEach((author, index) => {
         if (index) authors.append(document.createTextNode(", "));
         authors.append(
           author === featuredAuthor
-            ? element("strong", "featured-author", author)
+            ? element("span", "featured-author", author)
             : document.createTextNode(author)
         );
       });
@@ -234,7 +237,7 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   content.append(renderHeader(personal));
 
   const layout = element("div", "resume-layout");
-  const sidebar = element("aside", "sidebar", null);
+  const sidebar = element("div", "sidebar");
   const contactSection = section("Contact", "compact-section");
   contactSection.append(renderContact(personal));
   const skillsSection = section("Core Skills", "compact-section");
@@ -243,7 +246,7 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   languageSection.append(renderLanguages(personal.languages));
   const hobbiesSection = section("Hobbies", "compact-section");
   hobbiesSection.append(renderHobbies(hobbies));
-  const privacyConsent = element("footer", "privacy-consent", personal.privacyConsent);
+  const privacyConsent = element("p", "privacy-consent", personal.privacyConsent);
   sidebar.append(contactSection, skillsSection, languageSection, hobbiesSection, privacyConsent);
 
   const primary = element("div", "primary-content");
@@ -252,9 +255,11 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const professionalProjects = projects.filter((project) => !project.compact);
   const projectSection = section("Selected Projects");
   projectSection.append(renderProjects(professionalProjects.slice(0, 1)));
-  const continuedProjects = element("section", "continued-projects");
+  const continuedProjects = element("div", "continued-projects");
+  const continuationTitle = element("p", "section-title print-continuation-title", "Selected Projects");
+  continuationTitle.setAttribute("aria-hidden", "true");
   continuedProjects.append(
-    element("h2", "section-title print-continuation-title", "Selected Projects"),
+    continuationTitle,
     renderProjects(professionalProjects.slice(1))
   );
   const educationSection = section("Education");
@@ -267,6 +272,7 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const publicationsSection = section("Publications");
   publicationsSection.append(renderPublications(publications, personal.name));
   const pageFooter = element("footer", "page-footer");
+  pageFooter.setAttribute("aria-hidden", "true");
   pageFooter.append(
     element("span", null, `${personal.name} · ${personal.title}`),
     element("span", null, "2 / 2")

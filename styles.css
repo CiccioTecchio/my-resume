@@ -255,8 +255,9 @@ a {
   font-size: 0.78rem;
 }
 
-.technology-line strong {
+.technology-label {
   color: var(--ink);
+  font-weight: 700;
 }
 
 .article-link {
@@ -348,8 +349,9 @@ a {
   line-height: 1.35;
 }
 
-.publication-authors strong {
+.authors-label {
   color: var(--ink);
+  font-weight: 700;
 }
 
 .featured-author {

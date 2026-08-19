@@ -52,6 +52,7 @@ function listen(server) {
 }
 
 function closeServer(server) {
+  if (!server.listening) return Promise.resolve();
   return new Promise((resolve, reject) => {
     server.close((error) => (error ? reject(error) : resolve()));
   });
