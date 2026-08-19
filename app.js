@@ -298,7 +298,7 @@ async function loadResume() {
   } catch (error) {
     console.error(error);
     resume.replaceChildren(
-      element("p", "error-message", "The résumé data could not be loaded. Start a local web server and reload the page.")
+      element("p", "error-message", "The resume data could not be loaded. Start a local web server and reload the page.")
     );
   }
 }

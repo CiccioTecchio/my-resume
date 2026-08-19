@@ -2,7 +2,7 @@
   "name": "francesco-vicidomini-resume",
   "version": "1.0.0",
   "private": true,
-  "description": "HTML résumé and PDF post-processing workflow",
+  "description": "HTML resume and PDF post-processing workflow",
   "scripts": {
     "generate-pdf": "node scripts/generate-pdf.js",
     "generate-tagged-pdf": "node scripts/generate-tagged-pdf.js",

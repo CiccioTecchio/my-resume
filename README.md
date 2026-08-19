@@ -1,6 +1,6 @@
 # Francesco Vicidomini — Résumé
 
-This repository contains my personal résumé, built with **HTML5**, **CSS**, and vanilla **JavaScript**.
+This repository contains my personal resume, built with **HTML5**, **CSS**, and vanilla **JavaScript**.
 
 The page is designed for A4 printing and ATS-friendly text extraction. The final PDF is generated directly from the browser using its built-in **Print → Save as PDF** functionality.
 
@@ -49,7 +49,7 @@ Install the project dependency once:
 npm install
 ```
 
-After exporting the résumé with the browser, add PDF metadata and validate its page count and A4 format with:
+After exporting the resume with the browser, add PDF metadata and validate its page count and A4 format with:
 
 ```sh
 npm run generate-pdf -- "/path/to/browser-export.pdf"
@@ -77,7 +77,7 @@ Install Puppeteer and its managed Chromium browser after pulling the project cha
 npm install
 ```
 
-Generate the résumé directly from its HTML source with PDF tags, an accessibility structure, a document outline, and metadata:
+Generate the resume directly from its HTML source with PDF tags, an accessibility structure, a document outline, and metadata:
 
 ```sh
 npm run generate-tagged-pdf
