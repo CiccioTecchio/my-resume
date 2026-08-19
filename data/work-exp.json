@@ -1,0 +1,56 @@
+[
+  {
+    "company": "Engineering Ingegneria Informatica",
+    "location": "Naples, Italy",
+    "role": "Software Development Specialist",
+    "startDate": "2023-07",
+    "endDate": null,
+    "highlights": [
+      "Own front-end implementation decisions and technology selection for Angular cybersecurity platforms developed within EU-funded research projects.",
+      "Collaborate in English with international consortia and present implemented features, technical progress, and proposed solutions during project meetings.",
+      "Investigated redundant calculations in an existing system and guided an optimization that improved API response times without changing the expected results.",
+      "Organize development work through GitLab Issues and helped simplify a heavily branched Git history into a clearer commit chain, making the evolution of implemented features easier to trace.",
+      "Coordinate the development work of up to two colleagues and mentor them through solution analysis, trade-off evaluation, and context-aware technical decisions.",
+      "Design maintainable reactive applications with Angular, TypeScript, RxJS, NgRx, Nx, REST APIs, and WebSocket integrations."
+    ],
+    "keywords": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "NgRx",
+      "Nx",
+      "REST APIs",
+      "WebSocket",
+      "GitLab",
+      "Issue Tracking",
+      "Git Workflow",
+      "Docker",
+      "CI/CD",
+      "Cybersecurity",
+      "Mentoring"
+    ]
+  },
+  {
+    "company": "NTT DATA",
+    "location": "Naples, Italy",
+    "role": "Software Engineer",
+    "startDate": "2020-06",
+    "endDate": "2023-07",
+    "highlights": [
+      "Developed an Angular platform supporting administrative processes for citizens, businesses, and tax assistance centres within an Italian province.",
+      "Modernized legacy form workflows by introducing Angular reactive forms and FormControl-based validation.",
+      "Created reusable modules and shared components that reduced duplicated implementation work and accelerated the delivery of similar user interfaces.",
+      "Worked directly with the client to translate complex administrative requirements into clear, easy-to-complete interfaces and coordinated a three-person development team.",
+      "Designed the front-end integration of a major new module, defining actors, permissions, restricted application areas, and reusable versus domain-specific components."
+    ],
+    "keywords": [
+      "Angular",
+      "TypeScript",
+      "Spring Boot",
+      "MySQL",
+      "REST APIs",
+      "Reactive Forms",
+      "Agile Scrum"
+    ]
+  }
+]

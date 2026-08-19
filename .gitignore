@@ -1,0 +1,8 @@
+# Private notes and working material
+answers/
+
+# Node.js dependencies
+node_modules/
+
+# Generated PDF files
+dist/

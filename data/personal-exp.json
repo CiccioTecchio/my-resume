@@ -1,0 +1,136 @@
+[
+  {
+    "name": "AVANT",
+    "organization": "Engineering Ingegneria Informatica",
+    "startDate": "2025",
+    "endDate": null,
+    "url": "https://www.eng.it/it/insights/stories/research-projects/ipcei-cis-avant",
+    "description": "NextGenerationEU cybersecurity project for Digital Twin systems. Designed and developed workflows to monitor a Digital Twin, model business cases and connected assets, simulate MITRE ATT&CK attack paths and countermeasures, and compare inherent and residual asset risks. Researched the Digital Twin domain to translate emerging concepts into an implementable platform solution.",
+    "technologies": [
+      "Angular 22",
+      "TypeScript",
+      "RxJS",
+      "NgRx",
+      "Nx",
+      "WebSocket",
+      "Spring Boot",
+      "MongoDB",
+      "Docker"
+    ]
+  },
+  {
+    "name": "ENCRYPT",
+    "organization": "Engineering Ingegneria Informatica",
+    "startDate": "2023",
+    "endDate": "2025",
+    "url": "https://encrypt-project.eu/",
+    "description": "Horizon Europe privacy risk assessment project developed within a consortium of organizations from across Europe. Built a web module that models domain-specific asset taxonomies, evaluates LINDDUN privacy impacts and exposure to MITRE ATT&CK techniques, calculates privacy risk scores, and summarizes assessment results through interactive charts.",
+    "technologies": [
+      "Angular 18",
+      "TypeScript",
+      "RxJS",
+      "NgRx",
+      "Nx",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Docker"
+    ]
+  },
+  {
+    "name": "PAB Goes Digital",
+    "organization": "NTT DATA",
+    "startDate": "2020",
+    "endDate": "2023",
+    "url": null,
+    "description": "Large Angular platform for digitizing provincial administrative processes used by citizens, businesses, and tax assistance centres. Introduced reactive forms, reusable modules, role-based access patterns, and shared components while working directly with the client in an Agile Scrum team.",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Reactive Forms",
+      "Spring Boot",
+      "MySQL"
+    ]
+  },
+  {
+    "name": "Cicciotecchio.dev",
+    "organization": "Personal project",
+    "startDate": null,
+    "endDate": null,
+    "url": "https://cicciotecchio.dev/",
+    "repository": {
+      "label": "GitHub repository",
+      "url": "https://github.com/CiccioTecchio/CiccioTecchio.dev"
+    },
+    "description": "Personal website used to experiment with modern web technologies and evolving front-end approaches. Originally developed with Angular, later rebuilt with React, and currently implemented with Next.js. Deployed on Vercel to gain hands-on experience with continuous integration and deployment workflows.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Angular",
+      "TypeScript",
+      "Vercel",
+      "CI/CD"
+    ]
+  },
+  {
+    "name": "Knoxly",
+    "organization": "Master's thesis · Università degli Studi di Salerno",
+    "startDate": null,
+    "endDate": null,
+    "url": "https://github.com/CiccioTecchio/IA-Knoxly",
+    "description": "Master's thesis privacy assistant for Telegram Web and Gmail. Built a two-stage text-classification pipeline using multilingual sentence embeddings and topic-specific sensitivity classifiers, exposed through a Flask API and integrated with a configurable Chrome extension.",
+    "compact": true,
+    "technologies": [
+      "Python",
+      "TensorFlow Hub",
+      "Multilingual Universal Sentence Encoder",
+      "Text Classification",
+      "Flask REST API",
+      "Chrome Extension"
+    ]
+  },
+  {
+    "name": "ShareErasmus",
+    "organization": "Università degli Studi di Salerno",
+    "startDate": "2018",
+    "endDate": "2019",
+    "url": "https://github.com/CiccioTecchio/SharErasmus",
+    "description": "Erasmus platform developed while acting as project manager for a team of eight people.",
+    "compact": true,
+    "technologies": [
+      "Node.js",
+      "MySQL",
+      "Firebase",
+      "Jest",
+      "AWS"
+    ]
+  },
+  {
+    "name": "YASPL3",
+    "organization": "Università degli Studi di Salerno",
+    "startDate": null,
+    "endDate": null,
+    "url": "https://github.com/CiccioTecchio/YASPL3",
+    "description": "Designed a custom programming language and implemented its compiler in Java SE.",
+    "compact": true,
+    "technologies": [
+      "Java SE",
+      "Compilers",
+      "Language Design"
+    ]
+  },
+  {
+    "name": "N-body Simulation",
+    "organization": "Università degli Studi di Salerno",
+    "startDate": "2018",
+    "endDate": "2018",
+    "url": "https://github.com/CiccioTecchio/n-Body_MPI",
+    "description": "Parallel and concurrent N-body simulation with AWS cluster configuration and performance testing.",
+    "compact": true,
+    "technologies": [
+      "C",
+      "OpenMP",
+      "AWS EC2"
+    ]
+  }
+]

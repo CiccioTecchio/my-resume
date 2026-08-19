@@ -1,0 +1,44 @@
+{
+  "name": "Francesco Vicidomini",
+  "title": "Software Development Specialist",
+  "summary": "Software Development Specialist with 6+ years of experience designing Angular and TypeScript applications for cybersecurity, European research, and public-sector platforms. Specialized in reactive architectures with RxJS and NgRx, with hands-on experience in technical decision-making, team coordination, mentoring, and international project collaboration.",
+  "location": "Salerno, Italy",
+  "email": "fr.vicidomini94@gmail.com",
+  "phone": "+39 327 5684733",
+  "website": {
+    "label": "cicciotecchio.dev",
+    "url": "https://cicciotecchio.dev/"
+  },
+  "github": {
+    "label": "CiccioTecchio",
+    "url": "https://github.com/CiccioTecchio"
+  },
+  "linkedin": {
+    "label": "F. Vicidomini",
+    "url": "https://www.linkedin.com/in/francesco-vicidomini-374aa813a/"
+  },
+  "photo": "Propic-CV.jpg",
+  "skills": {
+    "Core Frontend": ["Angular", "TypeScript", "RxJS", "NgRx", "Nx", "Tailwind CSS"],
+    "Web Platform & Quality": ["REST APIs", "WebSocket", "React / Next.js (portfolio)", "Jest", "Unit Testing"],
+    "Backend": ["Node.js", "Spring Boot", "MongoDB", "MySQL"],
+    "DevOps & Practices": ["Git", "GitLab", "Docker", "CI/CD", "AWS", "Agile Scrum"],
+    "Domains": [
+      "Cybersecurity",
+      "Privacy Risk Assessment",
+      "Digital Twin",
+      "Public Administration"
+    ]
+  },
+  "languages": [
+    {
+      "name": "Italian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "B2"
+    }
+  ],
+  "privacyConsent": "I authorize the processing of my personal data in accordance with Regulation (EU) 2016/679 (GDPR)."
+}
