@@ -53,14 +53,14 @@
     ]
   },
   {
-    "name": "Cicciotecchio.dev",
+    "name": "FrancescoVicidomini.dev",
     "organization": "Personal project",
     "startDate": null,
     "endDate": null,
-    "url": "https://cicciotecchio.dev/",
+    "url": "https://francescovicidomini.dev/",
     "repository": {
       "label": "GitHub repository",
-      "url": "https://github.com/CiccioTecchio/CiccioTecchio.dev"
+      "url": "https://github.com/CiccioTecchio/FrancescoVicidomini.dev"
     },
     "description": "Personal website used to experiment with modern web technologies and evolving front-end approaches. Originally developed with Angular, later rebuilt with React, and currently implemented with Next.js. Deployed on Vercel to gain hands-on experience with continuous integration and deployment workflows.",
     "technologies": [
@@ -97,13 +97,7 @@
     "url": "https://github.com/CiccioTecchio/SharErasmus",
     "description": "Erasmus platform developed while acting as project manager for a team of eight people.",
     "compact": true,
-    "technologies": [
-      "Node.js",
-      "MySQL",
-      "Firebase",
-      "Jest",
-      "AWS"
-    ]
+    "technologies": ["Node.js", "MySQL", "Firebase", "Jest", "AWS"]
   },
   {
     "name": "YASPL3",
@@ -113,11 +107,7 @@
     "url": "https://github.com/CiccioTecchio/YASPL3",
     "description": "Designed a custom programming language and implemented its compiler in Java SE.",
     "compact": true,
-    "technologies": [
-      "Java SE",
-      "Compilers",
-      "Language Design"
-    ]
+    "technologies": ["Java SE", "Compilers", "Language Design"]
   },
   {
     "name": "N-body Simulation",
@@ -127,10 +117,6 @@
     "url": "https://github.com/CiccioTecchio/n-Body_MPI",
     "description": "Parallel and concurrent N-body simulation with AWS cluster configuration and performance testing.",
     "compact": true,
-    "technologies": [
-      "C",
-      "OpenMP",
-      "AWS EC2"
-    ]
+    "technologies": ["C", "OpenMP", "AWS EC2"]
   }
 ]
