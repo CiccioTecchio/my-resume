@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- changed persona website domain from cicciotecchio.dev -> francescovicidomini.dev
+- renamend personal website repo
+- updated myresume.pdf
+
 ## 1.0.0
 
 - Replaced the previous LaTeX resume with a version built using HTML5, CSS, and JavaScript.
