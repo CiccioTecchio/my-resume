@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- added OAuth2, keycloack and JWT
+
 ## 1.0.1
 
 - changed persona website domain from cicciotecchio.dev -> francescovicidomini.dev

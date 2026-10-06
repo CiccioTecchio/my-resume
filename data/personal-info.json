@@ -19,10 +19,33 @@
   },
   "photo": "Propic-CV.jpg",
   "skills": {
-    "Core Frontend": ["Angular", "TypeScript", "RxJS", "NgRx", "Nx", "Tailwind CSS"],
-    "Web Platform & Quality": ["REST APIs", "WebSocket", "React / Next.js (portfolio)", "Jest", "Unit Testing"],
+    "Core Frontend": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "NgRx",
+      "Nx",
+      "Tailwind CSS"
+    ],
+    "Web Platform & Quality": [
+      "REST APIs",
+      "WebSocket",
+      "React / Next.js (portfolio)",
+      "Jest",
+      "Unit Testing"
+    ],
     "Backend": ["Node.js", "Spring Boot", "MongoDB", "MySQL"],
-    "DevOps & Practices": ["Git", "GitLab", "Docker", "CI/CD", "AWS", "Agile Scrum"],
+    "DevOps & Practices": [
+      "Git",
+      "GitLab",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "OAuth2",
+      "JWT",
+      "Keycloak",
+      "Agile Scrum"
+    ],
     "Domains": [
       "Cybersecurity",
       "Privacy Risk Assessment",

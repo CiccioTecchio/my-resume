@@ -27,7 +27,10 @@
       "Docker",
       "CI/CD",
       "Cybersecurity",
-      "Mentoring"
+      "Mentoring",
+      "Keycloak",
+      "OAuth2",
+      "JWT"
     ]
   },
   {
@@ -50,7 +53,8 @@
       "MySQL",
       "REST APIs",
       "Reactive Forms",
-      "Agile Scrum"
+      "Agile Scrum",
+      "JWT"
     ]
   }
 ]

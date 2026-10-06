@@ -15,7 +15,9 @@
       "WebSocket",
       "Spring Boot",
       "MongoDB",
-      "Docker"
+      "Docker",
+      "Keycloak",
+      "CI/CD"
     ]
   },
   {
@@ -26,7 +28,7 @@
     "url": "https://encrypt-project.eu/",
     "description": "Horizon Europe privacy risk assessment project developed within a consortium of organizations from across Europe. Built a web module that models domain-specific asset taxonomies, evaluates LINDDUN privacy impacts and exposure to MITRE ATT&CK techniques, calculates privacy risk scores, and summarizes assessment results through interactive charts.",
     "technologies": [
-      "Angular 18",
+      "Angular 22",
       "TypeScript",
       "RxJS",
       "NgRx",
@@ -34,7 +36,9 @@
       "Tailwind CSS",
       "Node.js",
       "MongoDB",
-      "Docker"
+      "Docker",
+      "Keycloak",
+      "CI/CD"
     ]
   },
   {
