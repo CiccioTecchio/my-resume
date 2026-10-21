@@ -1,0 +1,222 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\definecolor{Ink}{HTML}{18212F}
+\definecolor{Accent}{HTML}{176B87}
+\definecolor{AccentDark}{HTML}{0E4C63}
+\definecolor{AccentSoft}{HTML}{E9F3F6}
+\definecolor{Muted}{HTML}{596475}
+
+\setbeamercolor{normal text}{fg=Ink,bg=white}
+\setbeamercolor{structure}{fg=Accent}
+\setbeamercolor{frametitle}{fg=white,bg=AccentDark}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=AccentSoft}
+\setbeamercolor{block title}{fg=white,bg=AccentDark}
+\setbeamercolor{block body}{fg=Ink,bg=AccentSoft}
+\setbeamercolor{alerted text}{fg=AccentDark}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{Accent}\small$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{Accent}\scriptsize$\bullet$}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.9cm,dp=0.25cm,leftskip=0.55cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.82\paperwidth,ht=2.6ex,dp=1.1ex,leftskip=.5cm]{author in head/foot}%
+      \color{Muted}\scriptsize Francesco Vicidomini · Software Engineer
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.18\paperwidth,ht=2.6ex,dp=1.1ex,rightskip=.5cm plus1fil]{date in head/foot}%
+      \color{Muted}\scriptsize \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}
+
+\title{Francesco Vicidomini}
+\subtitle{Software Engineer}
+\author{Candidatura per il ruolo Full-stack Developer presso Notarify}
+\date{}
+
+\begin{document}
+
+{
+  \setbeamercolor{background canvas}{bg=Ink}
+  \begin{frame}[plain]
+    \vfill
+    {\usebeamerfont{title}\color{white}\LARGE\bfseries\inserttitle\par}
+    \vspace{0.35cm}
+    {\color{AccentSoft}\Large\insertsubtitle\par}
+    \vspace{0.75cm}
+    {\color{white}\normalsize\insertauthor\par}
+    \vfill
+    {\color{AccentSoft}\small
+      Salerno, Italia \quad·\quad
+      \href{mailto:fr.vicidomini94@gmail.com}{fr.vicidomini94@gmail.com}
+    }
+  \end{frame}
+}
+
+\begin{frame}{Il mio profilo}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.62\textwidth}
+      \begin{itemize}
+        \item Oltre \alert{6 anni di esperienza professionale} nello sviluppo di applicazioni web complesse.
+        \item Autonomia su analisi, scelte tecniche, integrazione con API, debugging e code review.
+        \item Esperienza in cybersecurity, ricerca europea e servizi per la Pubblica Amministrazione.
+        \item Coordinamento e mentoring di piccoli team; collaborazione in inglese con partner internazionali.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \begin{block}{Posizionamento}
+        La mia esperienza principale è su TypeScript e Angular. Conosco Python, l'ho usato spesso per creare degli script per automatizzare dei processi e durante la mia tesi Magistrale.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Esperienze lavorative}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Engineering · 2023--oggi}
+        \begin{itemize}
+          \item Architettura e sviluppo di piattaforme per privacy, cybersecurity e Digital Twin.
+          \item REST, WebSocket, MongoDB, Docker, CI/CD e servizi integrazione verso API Spring Boot.
+          \item Analisi di colli di bottiglia e riduzione di calcoli server ridondanti.
+          \item Coordinamento, review e confronto con stakeholder internazionali.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{NTT DATA · 2020--2023}
+        \begin{itemize}
+          \item Piattaforma su larga scala per processi amministrativi provinciali.
+          \item Sviluppo Angular, API Spring Boot e MySQL.
+          \item Modernizzazione di codice legacy e componenti riutilizzabili.
+          \item Coordinamento di tre sviluppatori in Agile Scrum.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Il mio approccio al problem solving}
+  \begin{enumerate}
+    \item \textbf{Capire il dominio} — chiarisco obiettivi, vincoli e casi limite prima di scegliere la tecnologia.
+    \item \textbf{Ridurre il problema} — separo dati, regole di business, integrazioni e interfaccia in parti verificabili.
+    \item \textbf{Costruire feedback rapidi} — uso test, logging e piccoli esperimenti per validare le ipotesi.
+    \item \textbf{Rendere la soluzione mantenibile} — preferisco API chiare, componenti coesi, testati, revisionati e supportati da una documentazione essenziale.
+  \end{enumerate}
+
+  \vspace{0.35cm}
+  \begin{block}{Esempio}
+    Davanti a risposte API lente, ho seguito il flusso dei dati fino a individuare calcoli ripetuti, poi ho guidato una modifica che li eliminasse senza alterare il risultato atteso.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Esperienza con Python}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.58\textwidth}
+      \textbf{Knoxly — tesi magistrale}
+      \begin{itemize}
+        \item Sviluppo di un modello di ML per la privacy integrato con Telegram Web e Gmail.
+        \item Pipeline in due fasi per classificare la sensibilità dei testi.
+        \item Sentence embedding multilingue e classificatori specializzati per argomento.
+        \item Modello esposto tramite una \alert{REST API in Python e Flask}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \begin{block}{Fondamenta trasferibili}
+        \begin{itemize}
+          \item OOP e algoritmi
+          \item progettazione di API
+          \item database relazionali e documentali
+          \item test automatici
+          \item Docker e CI/CD
+          \item lettura e debugging di sistemi back-end
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Esperienze di sviluppo in autonomia}
+  Quando una tecnologia mi interessa cerco di studiarla in autonomia e la metto in pratica con esercizi e piccoli che pubblico ul mio \href{https://github.com/CiccioTecchio}{\textbf{GitHub}}.
+  I progetti più recenti sono:
+
+  \vspace{0.35cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{MyFiscalCode}
+        Calcolatore del codice fiscale italiano sviluppato per approfondire
+        Next.js, internazionalizzazione, persistenza dei dati e test automatici.
+
+        \vspace{0.25cm}
+        \href{https://my-fiscal-code.vercel.app/}{\textbf{App online}}
+        \quad·\quad
+        \href{https://github.com/CiccioTecchio/MyFiscalCode}{\textbf{Repository GitHub}}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{FrancescoVicidomini.dev}
+        Sito personale usato per sperimentare l'evoluzione dello stack front-end:
+        nato in Angular, poi riscritto in React e infine in Next.js con deploy su
+        Vercel.
+
+        \vspace{0.25cm}
+        \href{https://francescovicidomini.dev/}{\textbf{App online}}
+        \quad·\quad
+        \href{https://github.com/CiccioTecchio/FrancescoVicidomini.dev}{\textbf{Repository GitHub}}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Perché posso portare valore nel ruolo}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{Valore immediato}
+      \begin{itemize}
+        \item Metodo solido di analisi e debugging.
+        \item Esperienza reale su API, dati, test e delivery.
+        \item Capacità di muovermi in codebase e domini non familiari.
+        \item Comunicazione tecnica e collaborazione con il team.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Percorso su Python}
+      \begin{itemize}
+        \item Consolidare idiomi, typing e packaging dell'ecosistema.
+        \item Applicare da subito test, separazione delle responsabilità e API design.
+        \item Imparare sul prodotto reale attraverso feedback e code review.
+        \item Trasferire l'esperienza maturata su sistemi web complessi.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+{
+  \setbeamercolor{background canvas}{bg=Ink}
+  \begin{frame}[plain]
+    \vfill
+    {\color{white}\LARGE\bfseries Grazie per il vostro tempo\par}
+    \vspace{0.45cm}
+    {\color{white}
+      \href{mailto:fr.vicidomini94@gmail.com}{fr.vicidomini94@gmail.com}\par
+      \href{https://francescovicidomini.dev/}{francescovicidomini.dev}\par
+      \href{https://github.com/CiccioTecchio}{github.com/CiccioTecchio}
+    }
+    \vfill
+  \end{frame}
+}
+
+\end{document}

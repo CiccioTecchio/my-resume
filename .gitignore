@@ -4,5 +4,38 @@ answers/
 # Node.js dependencies
 node_modules/
 
+# Task runner cache
+.task/
+
 # Generated PDF files
 dist/
+
+# LaTeX / latexmk build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Compiled presentation
+presentation/*.pdf
