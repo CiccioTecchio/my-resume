@@ -58,12 +58,15 @@ function renderHeader(personal) {
   );
   identity.firstElementChild.setAttribute("aria-hidden", "true");
 
-  const photo = element("img", "profile-photo");
-  photo.src = personal.photo;
-  photo.alt = `Portrait of ${personal.name}`;
-  photo.width = 144;
-  photo.height = 144;
-  header.append(identity, photo);
+  header.append(identity);
+  if (personal.photo) {
+    const photo = element("img", "profile-photo");
+    photo.src = personal.photo;
+    photo.alt = `Portrait of ${personal.name}`;
+    photo.width = 144;
+    photo.height = 144;
+    header.append(photo);
+  }
   return header;
 }
 
@@ -240,14 +243,19 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const sidebar = element("div", "sidebar");
   const contactSection = section("Contact", "compact-section");
   contactSection.append(renderContact(personal));
-  const skillsSection = section("Core Skills", "compact-section");
+  const skillsSection = section("Technical Skills", "compact-section");
   skillsSection.append(renderSkills(personal.skills));
   const languageSection = section("Languages", "compact-section");
   languageSection.append(renderLanguages(personal.languages));
-  const hobbiesSection = section("Hobbies", "compact-section");
-  hobbiesSection.append(renderHobbies(hobbies));
-  const privacyConsent = element("p", "privacy-consent", personal.privacyConsent);
-  sidebar.append(contactSection, skillsSection, languageSection, hobbiesSection, privacyConsent);
+  sidebar.append(contactSection, skillsSection, languageSection);
+  if (hobbies.length) {
+    const hobbiesSection = section("Interests", "compact-section");
+    hobbiesSection.append(renderHobbies(hobbies));
+    sidebar.append(hobbiesSection);
+  }
+  if (personal.privacyConsent) {
+    sidebar.append(element("p", "privacy-consent", personal.privacyConsent));
+  }
 
   const primary = element("div", "primary-content");
   const workSection = section("Professional Experience");
@@ -265,7 +273,7 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const educationSection = section("Education");
   const academicProjects = element("div", "academic-project-group");
   academicProjects.append(
-    element("h3", "subsection-title", "Academic Projects"),
+    element("h3", "subsection-title", "Additional Projects"),
     renderAcademicProjects(projects)
   );
   educationSection.append(renderEducation(education), academicProjects);
