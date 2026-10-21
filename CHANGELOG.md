@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0
+
+- added a small presentation
+- added taskfile
+
+## 1.1.0
+
+- Tailored the résumé for the Amazon Front-End Engineer role.
+- Repositioned the profile around front-end architecture, delivery ownership, performance, mentoring, and cross-functional collaboration.
+- Added relevant ATS terminology while keeping professional Angular experience distinct from React and Next.js project experience.
+- Simplified the application format by removing the photo and hobbies while retaining the GDPR data-processing consent.
+
 ## 1.0.2
 
 - added OAuth2, keycloack and JWT
