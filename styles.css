@@ -1,12 +1,12 @@
 :root {
-  --ink: #18212f;
-  --muted: #596475;
-  --accent: #176b87;
-  --accent-dark: #0e4c63;
-  --accent-soft: #e9f3f6;
-  --line: #d7dee5;
+  --ink: #17243a;
+  --muted: #5c687b;
+  --accent: #2f68b2;
+  --accent-dark: #234f89;
+  --accent-soft: #eaf1fa;
+  --line: #d1dbea;
   --paper: #ffffff;
-  --canvas: #e9edf1;
+  --canvas: #e4eaf3;
   --page-width: 210mm;
   --page-min-height: 297mm;
 }
@@ -34,7 +34,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   background: var(--paper);
-  box-shadow: 0 16px 48px rgb(24 33 47 / 14%);
+  box-shadow: 0 16px 48px rgb(25 54 95 / 15%);
 }
 
 .resume-header {
@@ -44,12 +44,12 @@ body {
   align-items: center;
   padding: 17mm 17mm 11mm;
   color: white;
-  background: linear-gradient(125deg, #172536 0%, #174e63 72%, #176b87 100%);
+  background: linear-gradient(125deg, #19365f 0%, #285e9f 66%, #2a8393 100%);
 }
 
 .eyebrow {
   margin: 0 0 4px;
-  color: #aee6f4;
+  color: #c9e6f3;
   font-size: 0.78rem;
   font-weight: 750;
   letter-spacing: 0.15em;
@@ -66,7 +66,7 @@ body {
 .summary {
   max-width: 670px;
   margin: 12px 0 0;
-  color: #e9f3f6;
+  color: #f0f5fa;
   font-size: 0.96rem;
 }
 
@@ -88,7 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10mm 7mm 9mm 12mm;
-  background: #f4f7f8;
+  background: #f1f5fa;
   border-right: 1px solid var(--line);
 }
 
@@ -99,6 +99,10 @@ body {
 
 section + section {
   margin-top: 8mm;
+}
+
+.continued-projects + section {
+  margin-top: 3mm;
 }
 
 .compact-section + .compact-section {
@@ -160,7 +164,7 @@ a {
 
 .tag-list li {
   padding: 1mm 2mm;
-  border: 1px solid #bdd4dc;
+  border: 1px solid #b7cbe6;
   border-radius: 3px;
   background: var(--accent-soft);
   font-size: 0.74rem;
@@ -201,6 +205,40 @@ a {
 .education-list {
   display: grid;
   gap: 5mm;
+}
+
+.nextjs-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4mm;
+}
+
+.nextjs-project {
+  min-width: 0;
+  padding: 3mm;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
+  border-radius: 3px;
+  background: #f7f9fc;
+  break-inside: avoid;
+}
+
+.nextjs-project:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.nextjs-project-heading .entry-organization {
+  margin-top: 0.5mm;
+}
+
+.nextjs-project .project-description {
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.nextjs-project .technology-line,
+.nextjs-project .article-link {
+  font-size: 0.7rem;
 }
 
 .timeline-entry,
@@ -419,12 +457,12 @@ a {
     padding: 10mm 11mm 8mm;
     border-top: 0;
     color: white;
-    background: linear-gradient(125deg, #172536 0%, #174e63 72%, #176b87 100%);
-    box-shadow: inset 0 0 0 100mm #172536;
+    background: linear-gradient(125deg, #19365f 0%, #285e9f 66%, #2a8393 100%);
+    box-shadow: inset 0 0 0 100mm #285d9e;
   }
 
   .eyebrow {
-    color: #aee6f4;
+    color: #c9e6f3;
   }
 
   .name {
@@ -434,7 +472,7 @@ a {
   .summary {
     max-width: none;
     margin-top: 2.5mm;
-    color: #e9f3f6;
+    color: #f0f5fa;
     font-size: 0.9rem;
     line-height: 1.35;
   }
@@ -485,6 +523,14 @@ a {
     margin-top: 6mm;
   }
 
+  .page-two-content section + section {
+    margin-top: 4mm;
+  }
+
+  .continued-projects + section {
+    margin-top: 2mm;
+  }
+
   .compact-section + .compact-section {
     margin-top: 5mm;
   }
@@ -497,8 +543,16 @@ a {
     margin-bottom: 3mm;
   }
 
+  .sidebar .section-title {
+    margin-bottom: 2.5mm;
+  }
+
+  .sidebar .contact-list {
+    gap: 1.4mm;
+  }
+
   .skill-groups {
-    gap: 2mm;
+    gap: 1.6mm;
   }
 
   .tag-list {
@@ -506,14 +560,26 @@ a {
   }
 
   .tag-list li {
-    padding: 0.6mm 1.3mm;
+    padding: 0.5mm 1.2mm;
     font-size: 0.7rem;
+  }
+
+  .sidebar .language-list {
+    gap: 1mm 2mm;
   }
 
   .timeline,
   .projects,
   .education-list {
     gap: 4mm;
+  }
+
+  .nextjs-projects {
+    gap: 3mm;
+  }
+
+  .nextjs-project {
+    padding: 2.4mm;
   }
 
   .entry-title,
@@ -528,6 +594,7 @@ a {
 
   .timeline-entry,
   .project,
+  .nextjs-project,
   .academic-project-group,
   .publication,
   .education-entry {
@@ -537,16 +604,16 @@ a {
 
   .privacy-consent {
     margin-left: 0;
-    padding: 3mm 0 0;
-    font-size: 0.56rem;
+    padding: 2mm 0 0;
+    font-size: 0.52rem;
     line-height: 1.25;
   }
 
   .page-footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 8mm;
-    padding-top: 2.5mm;
+    margin-top: 3mm;
+    padding-top: 2mm;
     border-top: 0.6pt solid var(--line);
     color: var(--muted);
     font-size: 0.68rem;

@@ -4,7 +4,7 @@ const DATA_FILES = {
   education: "data/accademy-exp.json",
   projects: "data/personal-exp.json",
   hobbies: "data/hobbies.json",
-  publications: "data/publications.json"
+  publications: "data/publications.json",
 };
 
 const resume = document.querySelector("#resume");
@@ -33,7 +33,7 @@ function formatDate(value) {
   return new Intl.DateTimeFormat("en", {
     month: "short",
     year: "numeric",
-    timeZone: "UTC"
+    timeZone: "UTC",
   }).format(new Date(Date.UTC(year, month - 1, 1)));
 }
 
@@ -54,7 +54,7 @@ function renderHeader(personal) {
   identity.append(
     element("p", "eyebrow", personal.title),
     element("h1", "name", personal.name),
-    element("p", "summary", personal.summary)
+    element("p", "summary", personal.summary),
   );
   identity.firstElementChild.setAttribute("aria-hidden", "true");
 
@@ -78,7 +78,7 @@ function renderContact(personal) {
     [personal.phone, `tel:${personal.phone.replace(/\s/g, "")}`],
     [personal.website.label, personal.website.url],
     [`GitHub: ${personal.github.label}`, personal.github.url],
-    [`LinkedIn: ${personal.linkedin.label}`, personal.linkedin.url]
+    [`LinkedIn: ${personal.linkedin.label}`, personal.linkedin.url],
   ];
 
   for (const [label, url] of items) {
@@ -127,12 +127,17 @@ function renderWork(work) {
     const titleBlock = element("div");
     titleBlock.append(
       element("h3", "entry-title", job.role),
-      element("p", "entry-organization", `${job.company} · ${job.location}`)
+      element("p", "entry-organization", `${job.company} · ${job.location}`),
     );
-    heading.append(titleBlock, element("p", "entry-date", dateRange(job.startDate, job.endDate)));
+    heading.append(
+      titleBlock,
+      element("p", "entry-date", dateRange(job.startDate, job.endDate)),
+    );
 
     const highlights = element("ul", "highlights");
-    job.highlights.forEach((highlight) => highlights.append(element("li", null, highlight)));
+    job.highlights.forEach((highlight) =>
+      highlights.append(element("li", null, highlight)),
+    );
     article.append(heading, highlights);
     container.append(article);
   });
@@ -141,29 +146,49 @@ function renderWork(work) {
 
 function renderProjects(projects) {
   const container = element("div", "projects");
-  const professionalProjects = projects.filter((project) => !project.compact);
+  const professionalProjects = projects.filter(
+    (project) => !project.compact && project.featured !== false,
+  );
 
   professionalProjects.forEach((project) => {
     const article = element("article", "project");
     const heading = element("div", "entry-heading");
     const titleBlock = element("div");
     const title = element("h3", "entry-title");
-    title.append(project.url ? link(project.name, project.url) : document.createTextNode(project.name));
-    titleBlock.append(title, element("p", "entry-organization", project.organization));
+    title.append(
+      project.url
+        ? link(project.name, project.url)
+        : document.createTextNode(project.name),
+    );
+    titleBlock.append(
+      title,
+      element("p", "entry-organization", project.organization),
+    );
     const dates = dateRange(project.startDate, project.endDate);
     heading.append(titleBlock);
     if (dates) heading.append(element("p", "entry-date", dates));
 
-    const description = element("p", "project-description", project.description);
+    const description = element(
+      "p",
+      "project-description",
+      project.description,
+    );
     const technology = element("p", "technology-line");
-    technology.append(element("span", "technology-label", "Technologies: "), document.createTextNode(project.technologies.join(", ")));
+    technology.append(
+      element("span", "technology-label", "Technologies: "),
+      document.createTextNode(project.technologies.join(", ")),
+    );
     article.append(heading, description, technology);
     const projectLinks = element("div", "project-links");
     if (project.repository) {
-      projectLinks.append(link(project.repository.label, project.repository.url, "article-link"));
+      projectLinks.append(
+        link(project.repository.label, project.repository.url, "article-link"),
+      );
     }
     if (project.article) {
-      projectLinks.append(link(project.article.label, project.article.url, "article-link"));
+      projectLinks.append(
+        link(project.article.label, project.article.url, "article-link"),
+      );
     }
     if (projectLinks.childElementCount) article.append(projectLinks);
     container.append(article);
@@ -171,17 +196,49 @@ function renderProjects(projects) {
   return container;
 }
 
-function renderAcademicProjects(projects) {
-  const grid = element("div", "compact-projects");
-  projects.filter((project) => project.compact).forEach((project) => {
-    const article = element("article", "compact-project");
-    const title = element("h3", "compact-project-title");
-    title.append(project.url ? link(project.name, project.url) : document.createTextNode(project.name));
-    const description = element("p", null, project.description);
-    const technologies = element("p", "technology-line", project.technologies.join(", "));
-    article.append(title, description, technologies);
-    grid.append(article);
-  });
+function renderIndependentProjects(projects) {
+  const grid = element("div", "compact-projects nextjs-projects");
+
+  projects
+    .filter((project) => project.independentProject)
+    .forEach((project) => {
+      const article = element("article", "nextjs-project");
+      const heading = element("div", "nextjs-project-heading");
+      const title = element("h3", "entry-title");
+      title.append(
+        project.url
+          ? link(project.name, project.url)
+          : document.createTextNode(project.name),
+      );
+      heading.append(
+        title,
+        element("p", "entry-organization", project.organization),
+      );
+
+      const description = element(
+        "p",
+        "project-description",
+        project.description,
+      );
+      const technology = element("p", "technology-line");
+      technology.append(
+        element("span", "technology-label", "Technologies: "),
+        document.createTextNode(project.technologies.join(", ")),
+      );
+      article.append(heading, description, technology);
+
+      if (project.repository) {
+        article.append(
+          link(
+            project.repository.label,
+            project.repository.url,
+            "article-link",
+          ),
+        );
+      }
+      grid.append(article);
+    });
+
   return grid;
 }
 
@@ -193,9 +250,16 @@ function renderEducation(education) {
     const titleBlock = element("div");
     titleBlock.append(
       element("h3", "entry-title", item.qualification),
-      element("p", "entry-organization", `${item.institution} · ${item.location}`)
+      element(
+        "p",
+        "entry-organization",
+        `${item.institution} · ${item.location}`,
+      ),
     );
-    heading.append(titleBlock, element("p", "entry-date", dateRange(item.startDate, item.endDate)));
+    heading.append(
+      titleBlock,
+      element("p", "entry-date", dateRange(item.startDate, item.endDate)),
+    );
     article.append(heading, element("p", "grade", `Grade: ${item.grade}`));
     container.append(article);
   });
@@ -214,18 +278,24 @@ function renderPublications(publications, featuredAuthor) {
     const metadata = element(
       "p",
       "publication-metadata",
-      [publication.publisher, publication.context].filter(Boolean).join(" · ")
+      [publication.publisher, publication.context].filter(Boolean).join(" · "),
     );
     article.append(heading, metadata);
     if (publication.authors?.length) {
       const authors = element("p", "publication-authors");
-      authors.append(element("span", "authors-label", publication.authors.length === 1 ? "Author: " : "Authors: "));
+      authors.append(
+        element(
+          "span",
+          "authors-label",
+          publication.authors.length === 1 ? "Author: " : "Authors: ",
+        ),
+      );
       publication.authors.forEach((author, index) => {
         if (index) authors.append(document.createTextNode(", "));
         authors.append(
           author === featuredAuthor
             ? element("span", "featured-author", author)
-            : document.createTextNode(author)
+            : document.createTextNode(author),
         );
       });
       article.append(authors);
@@ -235,7 +305,14 @@ function renderPublications(publications, featuredAuthor) {
   return list;
 }
 
-function renderResume({ personal, work, education, projects, hobbies, publications }) {
+function renderResume({
+  personal,
+  work,
+  education,
+  projects,
+  hobbies,
+  publications,
+}) {
   const content = document.createDocumentFragment();
   content.append(renderHeader(personal));
 
@@ -248,7 +325,7 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const languageSection = section("Languages", "compact-section");
   languageSection.append(renderLanguages(personal.languages));
   sidebar.append(contactSection, skillsSection, languageSection);
-  if (hobbies.length) {
+  if (personal.showInterests !== false && hobbies.length) {
     const hobbiesSection = section("Interests", "compact-section");
     hobbiesSection.append(renderHobbies(hobbies));
     sidebar.append(hobbiesSection);
@@ -260,33 +337,42 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
   const primary = element("div", "primary-content");
   const workSection = section("Professional Experience");
   workSection.append(renderWork(work));
-  const professionalProjects = projects.filter((project) => !project.compact);
+  const professionalProjects = projects.filter(
+    (project) => !project.compact && project.featured !== false,
+  );
   const projectSection = section("Selected Projects");
   projectSection.append(renderProjects(professionalProjects.slice(0, 1)));
   const continuedProjects = element("div", "continued-projects");
-  const continuationTitle = element("p", "section-title print-continuation-title", "Selected Projects");
+  const continuationTitle = element(
+    "p",
+    "section-title print-continuation-title",
+    "Selected Projects",
+  );
   continuationTitle.setAttribute("aria-hidden", "true");
   continuedProjects.append(
     continuationTitle,
-    renderProjects(professionalProjects.slice(1))
+    renderProjects(professionalProjects.slice(1)),
   );
+  const nextjsSection = section("Independent Projects");
+  nextjsSection.append(renderIndependentProjects(projects));
   const educationSection = section("Education");
-  const academicProjects = element("div", "academic-project-group");
-  academicProjects.append(
-    element("h3", "subsection-title", "Additional Projects"),
-    renderAcademicProjects(projects)
-  );
-  educationSection.append(renderEducation(education), academicProjects);
+  educationSection.append(renderEducation(education));
   const publicationsSection = section("Publications");
   publicationsSection.append(renderPublications(publications, personal.name));
   const pageFooter = element("footer", "page-footer");
   pageFooter.setAttribute("aria-hidden", "true");
   pageFooter.append(
     element("span", null, `${personal.name} · ${personal.title}`),
-    element("span", null, "2 / 2")
+    element("span", null, "2 / 2"),
   );
   const pageTwoContent = element("div", "page-two-content");
-  pageTwoContent.append(continuedProjects, educationSection, publicationsSection, pageFooter);
+  pageTwoContent.append(
+    continuedProjects,
+    nextjsSection,
+    educationSection,
+    publicationsSection,
+    pageFooter,
+  );
   primary.append(workSection, projectSection, pageTwoContent);
 
   layout.append(sidebar, primary);
@@ -296,17 +382,32 @@ function renderResume({ personal, work, education, projects, hobbies, publicatio
 
 async function loadResume() {
   try {
-    const responses = await Promise.all(Object.values(DATA_FILES).map((path) => fetch(path)));
-    const failed = responses.find((response) => !response.ok);
-    if (failed) throw new Error(`Unable to load ${failed.url} (${failed.status})`);
-    const [personal, work, education, projects, hobbies, publications] = await Promise.all(
-      responses.map((response) => response.json())
+    const responses = await Promise.all(
+      Object.values(DATA_FILES).map((path) =>
+        fetch(path, { cache: "no-store" }),
+      ),
     );
-    renderResume({ personal, work, education, projects, hobbies, publications });
+    const failed = responses.find((response) => !response.ok);
+    if (failed)
+      throw new Error(`Unable to load ${failed.url} (${failed.status})`);
+    const [personal, work, education, projects, hobbies, publications] =
+      await Promise.all(responses.map((response) => response.json()));
+    renderResume({
+      personal,
+      work,
+      education,
+      projects,
+      hobbies,
+      publications,
+    });
   } catch (error) {
     console.error(error);
     resume.replaceChildren(
-      element("p", "error-message", "The resume data could not be loaded. Start a local web server and reload the page.")
+      element(
+        "p",
+        "error-message",
+        "The resume data could not be loaded. Start a local web server and reload the page.",
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Francesco Vicidomini",
-  "title": "Software Development Specialist",
-  "summary": "Software Development Specialist with 6+ years of experience designing Angular and TypeScript applications for cybersecurity, European research, and public-sector platforms. Specialized in reactive architectures with RxJS and NgRx, with hands-on experience in technical decision-making, team coordination, mentoring, and international project collaboration.",
+  "title": "Software Engineer · AI-Augmented Enterprise Development",
+  "summary": "Software engineer with 6 years of experience delivering enterprise applications across consulting and research. I turn complex requirements into reliable solutions by evaluating trade-offs with the team and carrying decisions through implementation. This approach has led me to coordinate small teams, improve branch coverage through supervised AI-generated tests, and collaborate internationally. I now focus on AI-assisted development, RAG systems, and MCP servers.",
   "location": "Salerno, Italy",
   "email": "fr.vicidomini94@gmail.com",
   "phone": "+39 327 5684733",
@@ -19,38 +19,44 @@
   },
   "photo": "Propic-CV.jpg",
   "skills": {
-    "Core Frontend": [
-      "Angular",
+    "AI-Assisted Engineering": [
+      "GitHub Copilot",
+      "Agentic Coding",
+      "RAG Systems",
+      "MCP Servers",
+      "Prompt Engineering",
+      "AI Output Validation",
+      "AI-Assisted Refactoring",
+      "Test Generation"
+    ],
+    "Backend & Integration": [
+      "Java SE",
+      "Spring Boot",
+      "REST APIs",
+      "Apache Kafka",
+      "Node.js",
+      "Python",
+      "MySQL",
+      "MongoDB"
+    ],
+    "Frontend": [
       "TypeScript",
+      "Angular",
       "RxJS",
       "NgRx",
       "Nx",
-      "Tailwind CSS"
+      "React",
+      "Next.js"
     ],
-    "Web Platform & Quality": [
-      "REST APIs",
-      "WebSocket",
-      "React / Next.js (portfolio)",
-      "Jest",
-      "Unit Testing"
-    ],
-    "Backend": ["Node.js", "Spring Boot", "MongoDB", "MySQL"],
-    "DevOps & Practices": [
-      "Git",
-      "GitLab",
+    "Quality & Delivery": [
+      "Automated Testing",
+      "Code Review",
+      "Git & GitLab",
+      "GitHub Actions",
       "Docker",
+      "Kubernetes",
       "CI/CD",
-      "AWS",
-      "OAuth2",
-      "JWT",
-      "Keycloak",
       "Agile Scrum"
-    ],
-    "Domains": [
-      "Cybersecurity",
-      "Privacy Risk Assessment",
-      "Digital Twin",
-      "Public Administration"
     ]
   },
   "languages": [
@@ -63,5 +69,6 @@
       "level": "B2"
     }
   ],
+  "showInterests": false,
   "privacyConsent": "I authorize the processing of my personal data in accordance with Regulation (EU) 2016/679 (GDPR)."
 }

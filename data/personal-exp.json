@@ -1,5 +1,21 @@
 [
   {
+    "name": "Knoxly",
+    "organization": "Master's thesis · Università degli Studi di Salerno",
+    "startDate": null,
+    "endDate": null,
+    "url": "https://github.com/CiccioTecchio/IA-Knoxly",
+    "description": "Privacy assistant for Telegram Web and Gmail using multilingual sentence embeddings, topic-specific sensitivity classifiers, a Flask REST API, and a configurable Chrome extension.",
+    "compact": true,
+    "technologies": [
+      "Python",
+      "Multilingual Sentence Embeddings",
+      "Text Classification",
+      "Flask REST API",
+      "Chrome Extension"
+    ]
+  },
+  {
     "name": "AVANT",
     "organization": "Engineering Ingegneria Informatica",
     "startDate": "2025",
@@ -12,7 +28,6 @@
       "RxJS",
       "NgRx",
       "Nx",
-      "WebSocket",
       "Spring Boot",
       "MongoDB",
       "Docker",
@@ -26,7 +41,7 @@
     "startDate": "2023",
     "endDate": "2025",
     "url": "https://encrypt-project.eu/",
-    "description": "Horizon Europe privacy risk assessment project developed within a consortium of organizations from across Europe. Built a web module that models domain-specific asset taxonomies, evaluates LINDDUN privacy impacts and exposure to MITRE ATT&CK techniques, calculates privacy risk scores, and summarizes assessment results through interactive charts.",
+    "description": "Horizon Europe privacy risk assessment project developed within a consortium of organizations from across Europe. Built a web module that models domain-specific asset taxonomies, evaluates LINDDUN privacy impacts and exposure to MITRE ATT&CK techniques, calculates privacy risk scores, and summarizes results through interactive charts. Integrated an Apache Kafka broker to publish selected application data to an external service. Used and supervised GitHub Copilot to document the Node.js APIs with OpenAPI specifications, reviewing generated output for accuracy and consistency.",
     "technologies": [
       "Angular 22",
       "TypeScript",
@@ -35,6 +50,8 @@
       "Nx",
       "Tailwind CSS",
       "Node.js",
+      "Apache Kafka",
+      "OpenAPI",
       "MongoDB",
       "Docker",
       "Keycloak",
@@ -47,18 +64,22 @@
     "startDate": "2020",
     "endDate": "2023",
     "url": null,
-    "description": "Large Angular platform for digitizing provincial administrative processes used by citizens, businesses, and tax assistance centres. Introduced reactive forms, reusable modules, role-based access patterns, and shared components while working directly with the client in an Agile Scrum team.",
+    "description": "Large production platform for digitizing provincial administrative processes used by citizens, businesses, tax assistance centres, and public offices. Contributed to requirements analysis, application maintenance, role-based workflows, REST integration, delivery, and direct client collaboration.",
     "technologies": [
       "Angular",
       "TypeScript",
-      "Reactive Forms",
       "Spring Boot",
-      "MySQL"
+      "REST APIs",
+      "MySQL",
+      "JWT",
+      "Agile Scrum"
     ]
   },
   {
     "name": "FrancescoVicidomini.dev",
-    "organization": "Personal project",
+    "organization": "Personal website",
+    "featured": false,
+    "independentProject": true,
     "startDate": null,
     "endDate": null,
     "url": "https://francescovicidomini.dev/",
@@ -66,31 +87,77 @@
       "label": "GitHub repository",
       "url": "https://github.com/CiccioTecchio/FrancescoVicidomini.dev"
     },
-    "description": "Personal website used to experiment with modern web technologies and evolving front-end approaches. Originally developed with Angular, later rebuilt with React, and currently implemented with Next.js. Deployed on Vercel to gain hands-on experience with continuous integration and deployment workflows.",
+    "description": "Improved the portfolio's Google indexability by adopting Server-Side Rendering with Next.js, making page content directly available to search crawlers.",
     "technologies": [
       "Next.js",
       "React",
-      "Angular",
-      "TypeScript",
+      "SSR",
+      "Tailwind CSS",
       "Vercel",
-      "CI/CD"
+      "GitHub CI/CD"
     ]
   },
   {
-    "name": "Knoxly",
-    "organization": "Master's thesis · Università degli Studi di Salerno",
+    "name": "MyFiscalCode",
+    "organization": "Personal project",
+    "independentProject": true,
     "startDate": null,
     "endDate": null,
-    "url": "https://github.com/CiccioTecchio/IA-Knoxly",
-    "description": "Master's thesis privacy assistant for Telegram Web and Gmail. Built a two-stage text-classification pipeline using multilingual sentence embeddings and topic-specific sensitivity classifiers, exposed through a Flask API and integrated with a configurable Chrome extension.",
+    "url": "https://my-fiscal-code.vercel.app/",
+    "repository": {
+      "label": "GitHub repository",
+      "url": "https://github.com/CiccioTecchio/MyFiscalCode"
+    },
+    "description": "Built a cookie-, tracker-, and ad-free Italian fiscal code calculator in Next.js to replace intrusive online alternatives. Used AI-assisted generation to create Jest unit tests covering positive, negative, and boundary cases, raising branch coverage above 80% for core functionality; complemented them with Playwright E2E tests. Now used by friends, colleagues, and family.",
     "compact": true,
     "technologies": [
+      "Next.js",
+      "React",
+      "Server Actions",
+      "Route Handlers",
+      "Mongoose",
+      "Jest",
+      "Playwright"
+    ]
+  },
+  {
+    "name": "My Superhero RAG",
+    "organization": "Personal AI experiment",
+    "featured": false,
+    "independentProject": true,
+    "startDate": null,
+    "endDate": null,
+    "url": null,
+    "repository": {
+      "label": "GitHub repository",
+      "url": "https://github.com/CiccioTecchio/my-super-hero-rag"
+    },
+    "description": "Built a Python RAG prototype over Markdown profiles of DC and Marvel superheroes. Used Universal Sentence Encoder embeddings and FAISS similarity search to retrieve relevant content, then engineered a prompt combining the user question with the reconstructed context to guide Gemini toward structured JSON answers.",
+    "technologies": [
       "Python",
-      "TensorFlow Hub",
-      "Multilingual Universal Sentence Encoder",
-      "Text Classification",
-      "Flask REST API",
-      "Chrome Extension"
+      "RAG",
+      "Universal Sentence Encoder",
+      "FAISS",
+      "Gemini",
+      "Prompt Engineering",
+      "Markdown"
+    ]
+  },
+  {
+    "name": "My Gym Stats MCP",
+    "organization": "Personal AI experiment · Incoming",
+    "featured": false,
+    "independentProject": true,
+    "startDate": null,
+    "endDate": null,
+    "url": null,
+    "description": "Building a Node.js MCP server over years of strength-training logs—weights, repetitions, and sets—to query progress through Claude or OpenAI Codex and generate data-driven insights and charts.",
+    "technologies": [
+      "Node.js",
+      "Model Context Protocol",
+      "Claude",
+      "OpenAI Codex",
+      "Data Visualization"
     ]
   },
   {
@@ -102,25 +169,5 @@
     "description": "Erasmus platform developed while acting as project manager for a team of eight people.",
     "compact": true,
     "technologies": ["Node.js", "MySQL", "Firebase", "Jest", "AWS"]
-  },
-  {
-    "name": "YASPL3",
-    "organization": "Università degli Studi di Salerno",
-    "startDate": null,
-    "endDate": null,
-    "url": "https://github.com/CiccioTecchio/YASPL3",
-    "description": "Designed a custom programming language and implemented its compiler in Java SE.",
-    "compact": true,
-    "technologies": ["Java SE", "Compilers", "Language Design"]
-  },
-  {
-    "name": "N-body Simulation",
-    "organization": "Università degli Studi di Salerno",
-    "startDate": "2018",
-    "endDate": "2018",
-    "url": "https://github.com/CiccioTecchio/n-Body_MPI",
-    "description": "Parallel and concurrent N-body simulation with AWS cluster configuration and performance testing.",
-    "compact": true,
-    "technologies": ["C", "OpenMP", "AWS EC2"]
   }
 ]

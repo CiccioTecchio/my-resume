@@ -18,18 +18,49 @@ const SIZE_TOLERANCE = 2;
 const projectRoot = path.resolve(__dirname, "..");
 
 const metadata = {
-  title: "Francesco Vicidomini — Software Development Specialist",
+  title: "Francesco Vicidomini — Software Engineer",
   author: "Francesco Vicidomini",
-  subject: "Curriculum Vitae — Software Development Specialist",
+  subject: "Curriculum Vitae — AI-Augmented Enterprise Software Development",
   keywords: [
-    "Angular",
+    "Software Engineer",
+    "AI-Augmented Development",
+    "Agentic Coding",
+    "GitHub Copilot",
+    "AI-Assisted Documentation",
+    "OpenAPI",
+    "RAG Systems",
+    "Retrieval-Augmented Generation",
+    "MCP Servers",
+    "Model Context Protocol",
+    "Claude",
+    "OpenAI Codex",
+    "Gemini",
+    "FAISS",
+    "Python",
+    "Prompt Engineering",
+    "AI Output Validation",
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "REST APIs",
+    "Apache Kafka",
+    "WebSocket",
+    "MySQL",
+    "MongoDB",
     "TypeScript",
-    "RxJS",
-    "NgRx",
-    "Nx",
-    "Cybersecurity",
-    "Front-End Development",
-    "Software Development",
+    "Angular",
+    "Automated Testing",
+    "Branch Coverage",
+    "Advanced Debugging",
+    "Edge-Case Analysis",
+    "Code Review",
+    "Git",
+    "Playwright",
+    "GitHub Actions",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Agile",
   ],
 };
 
@@ -103,9 +134,24 @@ function addXmpMetadata(pdf, now, documentId, instanceId) {
 }
 
 function loadLinkLabels() {
-  const personal = JSON.parse(fs.readFileSync(path.join(projectRoot, "data", "personal-info.json"), "utf8"));
-  const projects = JSON.parse(fs.readFileSync(path.join(projectRoot, "data", "personal-exp.json"), "utf8"));
-  const publications = JSON.parse(fs.readFileSync(path.join(projectRoot, "data", "publications.json"), "utf8"));
+  const personal = JSON.parse(
+    fs.readFileSync(
+      path.join(projectRoot, "data", "personal-info.json"),
+      "utf8",
+    ),
+  );
+  const projects = JSON.parse(
+    fs.readFileSync(
+      path.join(projectRoot, "data", "personal-exp.json"),
+      "utf8",
+    ),
+  );
+  const publications = JSON.parse(
+    fs.readFileSync(
+      path.join(projectRoot, "data", "publications.json"),
+      "utf8",
+    ),
+  );
   const labels = new Map([
     [`mailto:${personal.email}`, personal.email],
     [`tel:${personal.phone.replace(/\s/g, "")}`, personal.phone],
@@ -116,10 +162,12 @@ function loadLinkLabels() {
 
   for (const project of projects) {
     if (project.url) labels.set(project.url, project.name);
-    if (project.repository) labels.set(project.repository.url, project.repository.label);
+    if (project.repository)
+      labels.set(project.repository.url, project.repository.label);
     if (project.article) labels.set(project.article.url, project.article.label);
   }
-  for (const publication of publications) labels.set(publication.url, publication.title);
+  for (const publication of publications)
+    labels.set(publication.url, publication.title);
   return labels;
 }
 
@@ -153,23 +201,33 @@ function getAnnotationUri(annotation) {
 }
 
 function addLinkAlternativeText(pdf, labels) {
-  const structureTree = pdf.catalog.lookupMaybe(PDFName.of("StructTreeRoot"), PDFDict);
+  const structureTree = pdf.catalog.lookupMaybe(
+    PDFName.of("StructTreeRoot"),
+    PDFDict,
+  );
   if (!structureTree) return 0;
   let updated = 0;
 
   function visit(object) {
     const resolved = resolveObject(pdf, object);
     if (resolved instanceof PDFArray) {
-      for (let index = 0; index < resolved.size(); index += 1) visit(resolved.get(index));
+      for (let index = 0; index < resolved.size(); index += 1)
+        visit(resolved.get(index));
       return;
     }
     if (!(resolved instanceof PDFDict)) return;
 
     if (resolved.get(PDFName.of("S")) === PDFName.of("Link")) {
-      const annotation = findLinkedAnnotation(pdf, resolved.get(PDFName.of("K")));
+      const annotation = findLinkedAnnotation(
+        pdf,
+        resolved.get(PDFName.of("K")),
+      );
       const uri = getAnnotationUri(annotation);
       if (uri) {
-        resolved.set(PDFName.of("Alt"), PDFHexString.fromText(labels.get(uri) || uri));
+        resolved.set(
+          PDFName.of("Alt"),
+          PDFHexString.fromText(labels.get(uri) || uri),
+        );
         updated += 1;
       }
     }
@@ -187,18 +245,30 @@ function addLinkDescriptions(pdf) {
 
     for (let index = 0; index < annotations.size(); index += 1) {
       const annotation = annotations.lookup(index, PDFDict);
-      if (annotation.get(PDFName.of("Subtype")) !== PDFName.of("Link")) continue;
+      if (annotation.get(PDFName.of("Subtype")) !== PDFName.of("Link"))
+        continue;
       if (annotation.has(PDFName.of("Contents"))) continue;
 
       const action = annotation.lookupMaybe(PDFName.of("A"), PDFDict);
-      const uri = action?.lookupMaybe(PDFName.of("URI"), PDFString, PDFHexString);
-      if (uri) annotation.set(PDFName.of("Contents"), PDFHexString.fromText(uri.decodeText()));
+      const uri = action?.lookupMaybe(
+        PDFName.of("URI"),
+        PDFString,
+        PDFHexString,
+      );
+      if (uri)
+        annotation.set(
+          PDFName.of("Contents"),
+          PDFHexString.fromText(uri.decodeText()),
+        );
     }
   }
 }
 
 function addStandardRoleMappings(pdf) {
-  const structureTree = pdf.catalog.lookupMaybe(PDFName.of("StructTreeRoot"), PDFDict);
+  const structureTree = pdf.catalog.lookupMaybe(
+    PDFName.of("StructTreeRoot"),
+    PDFDict,
+  );
   if (!structureTree) return;
   let roleMap = structureTree.lookupMaybe(PDFName.of("RoleMap"), PDFDict);
   if (!roleMap) {
@@ -275,7 +345,9 @@ async function main() {
   console.log(`Pages: ${pages.length} · Format: A4 · Language: en`);
   console.log(`Title: ${metadata.title}`);
   console.log(`Author: ${metadata.author}`);
-  console.log(`Structure links with alternative text: ${describedStructureLinks}`);
+  console.log(
+    `Structure links with alternative text: ${describedStructureLinks}`,
+  );
 }
 
 main().catch((error) => {

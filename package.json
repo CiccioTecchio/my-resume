@@ -4,6 +4,7 @@
   "private": true,
   "description": "HTML resume and PDF post-processing workflow",
   "scripts": {
+    "dev": "python3 -m http.server 8000",
     "generate-pdf": "node scripts/generate-pdf.js",
     "generate-tagged-pdf": "node scripts/generate-tagged-pdf.js",
     "pdf-info": "pdfinfo dist/Francesco-Vicidomini-CV.pdf"
