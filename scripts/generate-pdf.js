@@ -20,7 +20,7 @@ const projectRoot = path.resolve(__dirname, "..");
 const metadata = {
   title: "Francesco Vicidomini — Software Engineer",
   author: "Francesco Vicidomini",
-  subject: "Curriculum Vitae — AI-Augmented Enterprise Software Development",
+  subject: "Curriculum Vitae — Software Engineer",
   keywords: [
     "Software Engineer",
     "AI-Augmented Development",

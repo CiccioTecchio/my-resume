@@ -201,6 +201,11 @@ function renderIndependentProjects(projects) {
 
   projects
     .filter((project) => project.independentProject)
+    .sort(
+      (firstProject, secondProject) =>
+        firstProject.independentProjectOrder -
+        secondProject.independentProjectOrder,
+    )
     .forEach((project) => {
       const article = element("article", "nextjs-project");
       const heading = element("div", "nextjs-project-heading");

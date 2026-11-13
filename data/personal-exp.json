@@ -80,6 +80,7 @@
     "organization": "Personal website",
     "featured": false,
     "independentProject": true,
+    "independentProjectOrder": 4,
     "startDate": null,
     "endDate": null,
     "url": "https://francescovicidomini.dev/",
@@ -101,6 +102,7 @@
     "name": "MyFiscalCode",
     "organization": "Personal project",
     "independentProject": true,
+    "independentProjectOrder": 3,
     "startDate": null,
     "endDate": null,
     "url": "https://my-fiscal-code.vercel.app/",
@@ -125,6 +127,7 @@
     "organization": "Personal AI experiment",
     "featured": false,
     "independentProject": true,
+    "independentProjectOrder": 2,
     "startDate": null,
     "endDate": null,
     "url": null,
@@ -145,19 +148,24 @@
   },
   {
     "name": "My Gym Stats MCP",
-    "organization": "Personal AI experiment · Incoming",
+    "organization": "Personal AI experiment",
     "featured": false,
     "independentProject": true,
+    "independentProjectOrder": 1,
     "startDate": null,
     "endDate": null,
     "url": null,
-    "description": "Building a Node.js MCP server over years of strength-training logs—weights, repetitions, and sets—to query progress through Claude or OpenAI Codex and generate data-driven insights and charts.",
+    "description": "One of my passions is weight training; I’ve been training for years and have always kept a logbook of the exercises performed and the weights lifted, using a Google Sheets file on Google Drive. Over time, the number of workouts grew significantly, making it increasingly difficult to summarize the data. While studying how MCP (Model Context Protocol) servers work, I realized that they allow an LLM to access my knowledge base and provide analyses.",
+    "repository": {
+      "label": "GitHub repository",
+      "url": "https://github.com/CiccioTecchio/my-gym-stats-mcp"
+    },
     "technologies": [
       "Node.js",
       "Model Context Protocol",
-      "Claude",
-      "OpenAI Codex",
-      "Data Visualization"
+      "Google Drive API",
+      "Google Sheets API",
+      "OpenAI Codex"
     ]
   },
   {
