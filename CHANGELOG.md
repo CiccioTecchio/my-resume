@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+
+- removed uni. exps
+- added AI experiment
+
 ## 1.2.0
 
 - added a small presentation
