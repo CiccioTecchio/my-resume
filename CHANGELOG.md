@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.1
+
+- changed intro
+- replace Master of Science with Master Degree
+
 ## 1.3.0
 
 - removed uni. exps
