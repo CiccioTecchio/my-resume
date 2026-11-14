@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0
+
+- added AGENTS.md
+- added skills search-job, adapt-cv and reset-job-context
+
 ## 1.3.1
 
 - changed intro
