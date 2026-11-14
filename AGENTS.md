@@ -5,8 +5,8 @@ accurate, ATS-friendly, accessible, and printable as a two-page A4 PDF.
 
 ## Sources of truth
 
-- Resume content lives in `data/*.json`.
-- Presentation lives in `index.html`, `app.js`, and `styles.css`.
+- Resume content lives in [data](data/*.json).
+- Presentation lives in [index.html](index.html), [app.js](app.js), and [styles.css](styles.css).
 - Preserve the existing JSON schemas and date format.
 - Use `null` as `endDate` for ongoing experiences.
 - Do not rename existing files unless the task explicitly requires it.
@@ -36,7 +36,7 @@ accurate, ATS-friendly, accessible, and printable as a two-page A4 PDF.
 
 After changing resume content:
 
-1. Validate every JSON file under `data/`.
+1. Validate every JSON file under [data](data/*.json).
 2. Check if the changes are visible at [localhost:8000](http://localhost:8000),
    2.1. If the server isn't started write an error in the chat like "The server isn't available, please run `npm run dev` or `task run`". After the error massage you have to stop to think, return the control to the user, and stop verification.
 3. Run `npm run generate-tagged-pdf`.
