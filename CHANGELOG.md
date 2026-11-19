@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1
+
+- added venv for python for `markitdown`
+- added `npm run resume-md`
+- update `search-job` skill
+- added `.vscode/settings`
+
 ## 1.4.0
 
 - added AGENTS.md
@@ -22,7 +29,7 @@
 
 ## 1.1.0
 
-- Tailored the résumé for the Amazon Front-End Engineer role.
+- Tailored the resume for the Amazon Front-End Engineer role.
 - Repositioned the profile around front-end architecture, delivery ownership, performance, mentoring, and cross-functional collaboration.
 - Added relevant ATS terminology while keeping professional Angular experience distinct from React and Next.js project experience.
 - Simplified the application format by removing the photo and hobbies while retaining the GDPR data-processing consent.
