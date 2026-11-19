@@ -12,7 +12,7 @@ tasks:
       - task --list
 
   run:
-    desc: Start the local résumé server
+    desc: Start the local resume server
     dir: "{{.TASKFILE_DIR}}"
     cmds:
       - python3 -m http.server {{.PORT}}

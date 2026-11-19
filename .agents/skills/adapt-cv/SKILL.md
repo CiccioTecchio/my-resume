@@ -5,7 +5,7 @@ description: This skill can be run only after the skill `search-job`, because it
 
 # Adapt CV
 
-It read the context from the skill `search-job` and adapt [my CV](../../../dist/Francesco-Vicidomini-CV.pdf) to the job opportunity that best matches my skills and preferences.
+It read the context from the skill `search-job` and adapt [my CV.md](../../../dist/my-resume.md) to the job opportunity that best matches my skills and preferences.
 
 ## Before to adapt the CV
 

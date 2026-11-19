@@ -1,13 +1,13 @@
 ---
 name: search-job
-description: Find the best job opportunities based on [my CV](../../../dist/Francesco-Vicidomini-CV.pdf).pdf`. Search for job opportunities over the principal job portals and over the principal italian banks, insurance, consulting and healthcare companies. Report the results in a structured format with a score from 0 to 10 based on how well the job opportunity matches my skills and preferences.
+description: Find the best job opportunities based on [my CV.md](../../../dist/my-resume.md).pdf`. Search for job opportunities over the principal job portals and over the principal italian banks, insurance, consulting and healthcare companies. Report the results in a structured format with a score from 0 to 10 based on how well the job opportunity matches my skills and preferences.
 ---
 
 ## Required references
 
 Before starting any job search, read both files completely:
 
-- [my CV](../../../dist/Francesco-Vicidomini-CV.pdf).
+- [my CV.md](../../../dist/my-resume.md). If you can't find the cv.md, send a message like "To improve my searching skills, please run `npm run resume-md`". After the message ask "Can I run the command for you?" if the user says Yes, you can else stop thinking.
 - [Where to search](references/WHERE-TO-SEARCH.md)
 - [What to search](references/WHAT-TO-SEARCH.md)
 
@@ -17,7 +17,7 @@ Apply all constraints from both files to the search and final ranking.
 
 # Search job
 
-Purpose of the skill: Find the best job opportunities based on [my CV](../../../dist/Francesco-Vicidomini-CV.pdf).
+Purpose of the skill: Find the best job opportunities based on [my CV.md](../../../dist/my-resume.md).
 
 ## Where to search
 
