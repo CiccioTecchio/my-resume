@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0
+
+- one page resume
+- added T layout
+
 ## 1.4.1
 
 - added venv for python for `markitdown`
