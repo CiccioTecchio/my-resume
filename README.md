@@ -81,7 +81,7 @@ The final document is written to `dist/Francesco-Vicidomini-CV.pdf`. To choose a
 npm run generate-pdf -- "/path/to/browser-export.pdf" "/path/to/final-resume.pdf"
 ```
 
-The command refuses to create the final file when the input does not contain exactly two A4 pages. It adds title, author, subject, keywords, language, creation date, and producer metadata without changing the visible layout.
+The command refuses to create the final file when the input does not contain exactly one A4 page. It adds title, author, subject, keywords, language, creation date, and producer metadata without changing the visible layout.
 
 Inspect the generated PDF and its metadata with:
 

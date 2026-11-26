@@ -11,7 +11,7 @@ const {
   PDFString,
 } = require("pdf-lib");
 
-const EXPECTED_PAGE_COUNT = 2;
+const EXPECTED_PAGE_COUNT = 1;
 const A4_WIDTH = 595.28;
 const A4_HEIGHT = 841.89;
 const SIZE_TOLERANCE = 2;

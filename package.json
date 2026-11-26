@@ -1,7 +1,15 @@
 {
   "name": "francesco-vicidomini-resume",
+  "author": {
+    "name": "Francesco Vicidomini",
+    "email": "fr.vicidomini94@gmail.com",
+    "url": "https://francescovicidomini.dev/"
+  },
   "version": "1.2.0",
-  "private": true,
+  "private": false,
+  "repository": {
+    "url": "https://github.com/CiccioTecchio/my-resume"
+  },
   "description": "HTML resume and PDF post-processing workflow",
   "scripts": {
     "dev": "python3 -m http.server 8000",

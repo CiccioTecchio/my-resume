@@ -6,13 +6,11 @@
     "startDate": "2023-07",
     "endDate": null,
     "highlights": [
-      "Own software design and delivery for cybersecurity applications in EU research projects, from requirements analysis and architecture through implementation, integration, testing, and CI/CD.",
-      "Built Spring Boot and Node.js solutions across diverse projects, containerized applications with Docker, and contributed to their deployment and release on Kubernetes clusters.",
-      "Diagnosed repeated server-side calculations in an existing system and guided an optimization that improved API response times while preserving expected results.",
-      "Used GitHub Copilot to generate test cases for positive, negative, and boundary scenarios; critically reviewed and validated AI-generated test data and cases, increasing branch coverage across projects and enabling more reliable application releases.",
-      "Currently enhancing a web application to integrate AI agents grounded in context retrieved by a RAG system, enabling context-aware interactions within existing application workflows.",
-      "Established a GitLab Issues workflow for development tracking, assigning every task to an owner and managing it through Todo, Doing, and Done states; assignees updated progress and linked commits to the relevant issue, providing clear task-to-code traceability.",
-      "Collaborated in English with international teams across EU-funded projects, aligning technical decisions, progress, and deliverables with partner organizations."
+      "Delivery: Own the design and delivery of cybersecurity applications for EU research projects, from requirements through testing and CI/CD.",
+      "Deployment: Built Spring Boot and Node.js services with Docker and contributed to their deployment on Kubernetes.",
+      "Performance: Identified repeated server-side calculations and guided an optimization that improved API response times.",
+      "Coverage: Validated GitHub Copilot-generated tests for positive, negative, and boundary cases, increasing branch coverage and release reliability.",
+      "Integration: Integrate AI agents grounded in RAG context into an existing web application."
     ],
     "keywords": [
       "Angular",
@@ -47,10 +45,9 @@
     "startDate": "2020-06",
     "endDate": "2023-07",
     "highlights": [
-      "Developed web interfaces using Angular for a production platform that digitized public-administration processes, integrating them with Java and Spring Boot REST services backed by MySQL.",
-      "Gathered requirements directly from client stakeholders and translated complex administrative needs into platform features, covering analysis, UI implementation, back-end integration, and release.",
-      "Consistently delivered reliable functionality as the project expanded, earning responsibility for coordinating a three-person development team through task assignment, implementation support, and code review.",
-      "Worked within an Agile Scrum team and actively participated in the full delivery cycle, including backlog refinement, sprint planning, daily stand-ups, reviews, and retrospectives."
+      "Platform: Built Angular interfaces and integrated Java and Spring Boot REST services backed by MySQL for a public-administration platform.",
+      "Features: Translated client requirements into features across analysis, UI implementation, back-end integration, and release.",
+      "Coordination: Coordinated a three-person development team through task assignment, implementation support, and code review."
     ],
     "keywords": [
       "Angular",

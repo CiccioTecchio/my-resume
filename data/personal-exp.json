@@ -110,7 +110,7 @@
       "label": "GitHub repository",
       "url": "https://github.com/CiccioTecchio/MyFiscalCode"
     },
-    "description": "Built a cookie-, tracker-, and ad-free Italian fiscal code calculator in Next.js to replace intrusive online alternatives. Used AI-assisted generation to create Jest unit tests covering positive, negative, and boundary cases, raising branch coverage above 80% for core functionality; complemented them with Playwright E2E tests. Now used by friends, colleagues, and family.",
+    "description": "Built a cookie-, tracker-, and ad-free Italian fiscal code calculator in Next.js. Used AI-assisted Jest tests and Playwright E2E tests to raise core branch coverage above 80%.",
     "compact": true,
     "technologies": [
       "Next.js",
@@ -135,7 +135,7 @@
       "label": "GitHub repository",
       "url": "https://github.com/CiccioTecchio/my-super-hero-rag"
     },
-    "description": "Built a Python RAG prototype over Markdown profiles of DC and Marvel superheroes. Used Universal Sentence Encoder embeddings and FAISS similarity search to retrieve relevant content, then engineered a prompt combining the user question with the reconstructed context to guide Gemini toward structured JSON answers.",
+    "description": "Built a Python RAG prototype using FAISS retrieval over superhero profiles to guide Gemini toward structured JSON answers.",
     "technologies": [
       "Python",
       "RAG",
@@ -155,7 +155,7 @@
     "startDate": null,
     "endDate": null,
     "url": null,
-    "description": "One of my passions is weight training; I’ve been training for years and have always kept a logbook of the exercises performed and the weights lifted, using a Google Sheets file on Google Drive. Over time, the number of workouts grew significantly, making it increasingly difficult to summarize the data. While studying how MCP (Model Context Protocol) servers work, I realized that they allow an LLM to access my knowledge base and provide analyses.",
+    "description": "Explored MCP servers to give an LLM access to workout logs in Google Sheets for analysis.",
     "repository": {
       "label": "GitHub repository",
       "url": "https://github.com/CiccioTecchio/my-gym-stats-mcp"
@@ -166,6 +166,29 @@
       "Google Drive API",
       "Google Sheets API",
       "OpenAI Codex"
+    ]
+  },
+  {
+    "name": "my-resume",
+    "organization": "Personal project",
+    "featured": false,
+    "independentProject": true,
+    "independentProjectOrder": 5,
+    "startDate": null,
+    "endDate": null,
+    "url": null,
+    "description": "Built an ATS-friendly resume with tagged A4 PDF generation and AI agent workflows to find matching jobs and tailor the CV to a selected opening.",
+    "repository": {
+      "label": "GitHub repository",
+      "url": "https://github.com/CiccioTecchio/my-resume"
+    },
+    "technologies": [
+      "HTML5",
+      "CSS",
+      "JavaScript",
+      "JSON",
+      "Puppeteer",
+      "pdf-lib"
     ]
   },
   {
